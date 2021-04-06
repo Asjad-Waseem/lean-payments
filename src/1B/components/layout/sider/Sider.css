@@ -1,0 +1,581 @@
+@media only screen and (max-width: 767px) {
+
+    .modal.left .modal-dialog {
+        
+        position: fixed;
+        margin: auto;
+        width: 256px;
+        height: 100%;
+        -webkit-transform: translate3d(0%, 0, 0);
+        -ms-transform: translate3d(0%, 0, 0);
+        -o-transform: translate3d(0%, 0, 0);
+        transform: translate3d(0%, 0, 0);
+    }
+
+    .modal.left .modal-content {
+
+        height: 100%;
+        overflow-y: auto;
+    
+    }
+
+    .modal.left .modal-body {
+
+        padding: 15px 15px 80px;
+
+    }
+
+    .modal.left.fade .modal-dialog {
+
+        left: -256px;
+        -webkit-transition: opacity 0.3s linear, left 0.3s ease-out;
+        -moz-transition: opacity 0.3s linear, left 0.3s ease-out;
+        -o-transition: opacity 0.3s linear, left 0.3s ease-out;
+        transition: opacity 0.3s linear, left 0.3s ease-out;
+
+    }
+
+    .modal.left.fade.show .modal-dialog {
+
+        left: 0;
+ 
+    }
+
+    .modal-header {
+
+        border-bottom: none !important;
+
+    }
+
+    .modal-footer {
+
+        border-top: none !important;
+
+    }
+
+}
+    
+@media only screen and (min-width: 768px) {
+
+    .sidebar {
+
+        z-index: 1;
+        position: fixed;
+        width: 68px;
+        height: 100vh;
+        background-color: #ffffff;
+        text-align: center; 
+    
+    }
+
+}
+
+@media only screen and (min-width: 768px) {
+
+    .open__sidebar {
+
+        z-index: 1;
+        position: fixed;
+        width: 256px;
+        height: 100vh;
+        background-color: #ffffff;
+
+    }
+
+}
+
+@media only screen and (max-width: 767px) {
+
+    .open__sidebar {
+
+        z-index: 1;
+        position: fixed;
+        width: 500px;
+        height: 100vh;
+        background-color: #ffffff;
+
+    }
+
+}
+    
+.sidebar__nav {
+    
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    
+}
+
+.open__sidebar__nav {
+
+    padding: 0;
+    list-style: none;
+
+}
+        
+.name1 {
+
+    display: inline;
+    text-decoration: none;
+    margin-top: -40px;
+    font-size: 14px;
+
+}
+
+.email1 {
+
+    color: #788896;
+    font-size: 11px;
+    margin-top: -18px;
+
+}
+
+.hamburger__icon__1 {
+
+    height: 15px;
+    width: 15px;
+    margin-left: -23px;
+    margin-top: -7px;
+
+}
+
+.hamburger__btn {
+
+    background-color: transparent;
+    outline: none;
+    border: none;
+
+}
+
+.hamburger__icon {
+
+    margin-top: 20px;
+    height: 15px;
+    width: 15px;
+    margin-left: -2.5px;
+
+}
+
+.hamburger__icon__open {
+
+    margin-top: 20px;
+    height: 15px;
+    width: 15px;
+    margin-left: -2.5px;
+
+}
+
+.lp__logo__1 {
+
+    margin-top: 3px;
+    margin-left: 15px;
+    height: 27px;
+    width: 140px;
+
+}
+
+.lp__logo {
+
+    margin-top: 20px;
+    height: 27px;
+    width: 140px;
+    margin-bottom: -5px;
+    margin-left: 15px;
+
+}
+
+.user__avatar__1 {
+
+    display: flex;
+    flex-direction: row;
+    margin-top: -13px;
+
+}
+
+.user__avatar {
+
+    display: flex;
+    flex-direction: row;
+
+}
+
+.user__link {
+
+    text-decoration: none;
+    color: black;
+
+}
+
+.user__info__1 {
+
+    display: flex;
+    flex-direction: column;
+    margin-left: 55px;
+
+}
+
+.user__info {
+
+    display: flex;
+    flex-direction: column;
+    margin-left: 70px;
+
+}
+
+.avatar__icon {
+
+    height: 46px;
+    width: 46px;
+    margin-left: 11px;
+
+}
+
+.avatar__icon__open__1 {
+
+    height: 46px;
+    width: 46px;
+    margin-left: -5px;
+
+}
+
+.avatar__icon__open {
+
+    height: 46px;
+    width: 46px;
+    margin-left: 11px;
+
+}
+
+.generic__link011 {
+
+    margin-left: 38px;
+    margin-top: -28px;
+    font-size: 13px;
+
+}
+
+.generic__link01 {
+
+    margin-left: 55px;
+    margin-top: -28px;
+    font-size: 13px;
+
+}
+
+.generic__link022 {
+
+    margin-left: 70px;
+    margin-top: -23px;
+    font-size: 13px;
+
+}
+
+.generic__link02 {
+
+    margin-left: 86px;
+    margin-top: -23px;
+    font-size: 13px;
+
+}
+
+.generic__link033 {
+
+    margin-left: 101px;
+    margin-top: -28px;
+    font-size: 13px;
+    
+}
+
+.generic__link03 {
+
+    margin-left: 119px;
+    margin-top: -28px;
+    font-size: 13px;
+
+}
+
+.generic__link044 {
+
+    margin-left: 132px;
+    margin-top: -28px;
+    font-size: 13px;
+
+}
+
+.generic__link04 {
+
+    margin-left: 151px;
+    margin-top: -28px;
+    font-size: 13px;
+
+}
+
+.dashboard__icon {
+
+    margin-top: 5px;
+    height: 20px;
+    width: 20px;
+
+}
+
+.dashboard__icon__open__1 {
+
+    margin-top: -17px;
+    height: 20px;
+    width: 20px;
+    margin-left: 7px;
+
+}
+
+.dashboard__icon__open {
+
+    margin-top: -17px;
+    height: 20px;
+    width: 20px;
+    margin-left: 24px;
+
+}
+
+
+.businesses__icon {
+
+    margin-top: 20px;
+    height: 20px;
+    width: 20px;
+
+}
+
+.businesses__icon__open__1 {
+
+    margin-top: -47px;
+    height: 20px;
+    width: 20px;
+    margin-left: 7px;
+
+}
+
+.businesses__icon__open {
+
+    margin-top: -47px;
+    height: 20px;
+    width: 20px;
+    margin-left: 24px;
+
+}
+
+.businesses__link__1 {
+
+    margin-left: 38px;
+    margin-top: -40px;
+    font-size: 13px;
+
+}
+
+.businesses__link {
+
+    margin-left: 55px;
+    margin-top: -40px;
+    font-size: 13px;
+
+}
+
+.create__a__business__icon__1 {
+
+    height: 20px;
+    width: 20px;
+    margin-left: 38px;
+    margin-top: -10px;
+
+}
+
+.create__a__business__icon {
+
+    height: 20px;
+    width: 20px;
+    margin-left: 55px;
+    margin-top: -10px;
+
+}
+
+.payees__icon__1 {
+
+    height: 20px;
+    width: 20px;
+    margin-left: 69px;
+    margin-top: -20px;
+
+}
+
+.payees__icon {
+
+    height: 20px;
+    width: 20px;
+    margin-left: 87px;
+    margin-top: -20px;
+
+}
+
+.members__icon__1 {
+
+    height: 20px;
+    width: 20px;
+    margin-left: 69px;
+    margin-top: -20px;
+
+}
+
+.members__icon {
+
+    height: 20px;
+    width: 20px;
+    margin-left: 87px;
+    margin-top: -20px;
+
+}
+
+.pockets__icon__1 {
+
+    height: 20px;
+    width: 20px;
+    margin-left: 69px;
+    margin-top: -20px;
+
+}
+
+.pockets__icon {
+
+    height: 20px;
+    width: 20px;
+    margin-left: 87px;
+    margin-top: -20px;
+
+}
+
+.opex__icon__1 {
+
+    height: 20px;
+    width: 20px;
+    margin-left: 100px;
+    margin-top: -20px;
+
+}
+
+.opex__icon {
+
+    height: 20px;
+    width: 20px;
+    margin-left: 119px;
+    margin-top: -20px;
+
+}
+
+.tax__icon__1 {
+
+    height: 20px;
+    width: 20px;
+    margin-left: 100px;
+    margin-top: -20px;
+
+}
+
+.tax__icon {
+
+    height: 20px;
+    width: 20px;
+    margin-left: 119px;
+    margin-top: -20px;
+
+}
+
+.owners__comp__icon__1 {
+
+    height: 20px;
+    width: 20px;
+    margin-left: 100px;
+    margin-top: -20px;
+
+}
+
+.owners__comp__icon {
+
+    height: 20px;
+    width: 20px;
+    margin-left: 119px;
+    margin-top: -20px;
+
+}
+
+.divider {
+
+    border-top: 2px solid rgba(255,255,255,.5); 
+    margin-top: 38px; 
+    background-color: #9eadba;
+
+}
+
+.divider__open__1 {
+
+    border-top: 2px solid rgba(255,255,255,.5); 
+    margin-top: 36px; 
+    background-color: #9eadba;
+    margin-left: -15px;
+    margin-right: -15px;
+    
+}
+
+.divider__open {
+
+    border-top: 2px solid rgba(255,255,255,.5); 
+    margin-top: 36px; 
+    background-color: #9eadba;
+
+}
+
+.log__out__icon {
+
+    margin-top: -17px;
+    height: 20px;
+    width: 20px;
+
+}
+
+.log__out__icon__open__1 {
+
+    margin-top: -17px;
+    height: 20px;
+    width: 20px;
+    margin-left: 12px;
+
+}
+
+.log__out__icon__open {
+
+    margin-top: -19px;
+    height: 20px;
+    width: 20px;
+    margin-left: 24px;
+
+}
+
+.log__out__link__1 {
+
+    margin-left: 40px;
+    margin-top: -28px;
+    font-size: 13px;
+
+}
+
+.log__out__link {
+
+    margin-left: 55px;
+    margin-top: -28px;
+    font-size: 13px;
+
+}
+
+/* This is the css class as a sample if you want to remove box-shadow or outline from a button element on focus */
+
+/* .testing:focus {
+    box-shadow: none !important;
+    outline: 0 !important;
+} */

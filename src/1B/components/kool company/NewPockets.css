@@ -1,0 +1,235 @@
+.new__pockets {
+
+    background-color: #f9f9f9;
+   
+}
+
+.new__pockets__page__content__1 {
+
+    width: 100%;
+    padding-left: 68px;
+    position: relative;
+    background-color: #f9f9f9;
+    top: -16px;
+ 
+}
+ 
+.new__pockets__page__content {
+
+   width: 100%;
+   padding-left: 68px;
+   position: relative;
+   background-color: #f9f9f9;
+   top: 20px;
+
+}
+
+.new__pockets__page__content__open {
+
+   width: 100%;
+   position: relative;
+   padding-left: 256px;
+   background-color: #f9f9f9;
+   top: 20px;
+
+}
+
+.new__pockets__layout__container {
+
+   background-color: #f9f9f9;
+
+}
+
+.new__pockets__container {
+
+    margin-left: 20px !important;
+
+}
+
+.new__pockets__column {
+
+    margin-right: 20px;
+
+}
+
+.table thead th {
+
+    border-bottom: 1px solid #dfe6ed !important;
+
+}
+
+.table td, .table th {
+
+    border-top: 1px solid #dfe6ed !important;
+
+} 
+
+.bold__font {
+
+    font-weight: bold;
+
+}
+
+.pockets__text {
+
+    color: #81909d;
+    font-size: 13px;
+
+}
+
+.text__dark {
+
+    color: black;
+
+}
+
+.gray__font {
+
+    color: #798997;
+
+}
+
+.font__13 {
+
+    font-size: 13px;
+
+}
+
+.font__14 {
+
+    font-size: 14px;
+
+}
+
+.font__500 {
+
+    font-weight: 500;
+
+}
+
+.divider__styling {
+
+    margin-left: -35px;
+    margin-right: -35px; 
+    margin-top: 5px;
+
+}
+
+.create__pocket {
+
+    display: flex;
+    flex-direction: row;
+    color: blue;
+
+}
+
+.create__pocket__icon {
+
+    height: 20px;
+    width: 25px;
+
+}
+
+.link__style {
+
+    margin-bottom: 13px;
+    margin-top: -3px;
+
+}
+
+.modal__close__icon {
+
+    height: 25px;
+    width: 25px;
+    fill: #4b5c6b;
+
+}
+
+.modal__heading {
+
+    margin-top: -30px;
+
+}
+
+.modal__gray__color {
+
+    color: #7a8a97;
+
+}
+
+.accounting__quickbooks {
+
+    font-size: 12px;
+    color: #7a8a97;
+    margin-left: 20px;
+
+}
+
+.manual__text {
+
+    font-size: 12px;
+    color: #7a8a97;
+    margin-left: 20px;
+
+}
+
+.continue {
+
+    color: #2c88d9;
+    font-size: 14px;
+    
+}
+
+.sub__pockets__icon {
+
+    height: 20px;
+    width: 25px;
+
+}
+
+.settings__icon {
+
+    height: 18px;
+    width: 18px;
+    margin-top: 0.5px;
+    fill: #2c88d9;
+
+}
+
+.last__subpocket__row {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: -15px;
+
+}
+
+.pocket__overview__card {
+
+    background-color: #ffffff;
+    border: 2px solid #c3cfd9; 
+    border-radius: 0px 0px 0px 0px;
+
+}
+
+.space__between__flex {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.row__flex {
+
+    display: flex;
+    flex-direction: row;
+
+}
+
+.white__space {
+
+    white-space: nowrap;
+
+}

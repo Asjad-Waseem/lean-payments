@@ -1,0 +1,364 @@
+.executive__view {
+
+    background-color: #f9f9f9;
+
+}
+
+.executive__page__content__1 {
+
+    width: 100%;
+    padding-left: 68px;
+    position: relative;
+    background-color: #f9f9f9;
+    top: -16px;
+ 
+}
+ 
+.executive__page__content {
+
+   width: 100%;
+   padding-left: 68px;
+   position: relative;
+   background-color: #f9f9f9;
+   top: 20px;
+
+}
+
+.executive__page__content__open {
+
+   width: 100%;
+   position: relative;
+   padding-left: 256px;
+   background-color: #f9f9f9;
+   top: 20px;
+
+}
+
+.executive__layout__container {
+
+   background-color: #f9f9f9;
+
+}
+
+.executive__view__container {
+
+    margin-left: 20px !important;
+    margin-right: 20px !important;
+    background-color: #f9f9f9;
+
+}
+
+.executive__view__container__1 {
+
+    background-color: #f9f9f9;
+    margin-right: 20px !important;
+    
+}
+
+.bold__font {
+
+    font-weight: bold;
+
+}
+
+.space__between__flex {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.row__flex {
+
+    display: flex;
+    flex-direction: row;
+
+}
+
+.column__flex {
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+.user__avatar__icon {
+
+    height: 70px;
+    width: 70px;
+
+}
+
+.graph__height {
+
+    height: 200px;
+
+}
+
+.tool__tip__message {
+
+    margin-top: 15px;
+    margin-left: 0px;
+
+}
+
+.tool__tip {
+
+    height: 15px;
+    width: 15px;
+    margin-top: 8px;
+
+}
+
+.standings__remarks {
+
+    color: #30b6a8;
+
+}
+
+.transfer__icon {
+
+    height: 50px;
+    width: 50px;
+
+}
+
+.arrow__icons {
+
+    height: 15px;
+    width: 15px;
+
+}
+
+.pocket__overview__card {
+
+    background-color: #ffffff; 
+    border: 2px solid #c3cfd9;
+    border-radius: 0px 0px 0px 0px;
+
+}
+
+.kool__company__overview {
+
+    height: 325px;
+    background-color: #ffffff;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 0.25rem;
+    overflow-x: auto;
+
+}
+
+.font__400 {
+
+    font-weight: 400;
+
+}
+
+.font__500 {
+
+    font-weight: 500;
+
+}
+
+.gray__font {
+
+    color: #788896;
+
+}
+
+.blue__font {
+
+    color: #2c88d9;
+
+}
+
+.pockets__gray__font {
+
+    color: #798997;
+
+}
+
+.font__12 {
+
+    font-size: 12px;
+
+}
+
+.font__13 {
+
+    font-size: 13px;
+
+}
+
+.divider__styling {
+
+    margin-left: -35px;
+    margin-right: -35px; 
+    margin-top: 5px;
+
+}
+
+.inflow__state {
+
+    background-color: #96c3ec !important;
+
+}
+
+.outflow__state {
+
+    background-color: #96c3ec !important;
+
+}
+
+.text__light {
+
+    color: #ffffff;
+
+}
+
+.text__dark {
+
+    color: black;
+
+}
+
+.sub__pockets__icon {
+
+    height: 20px;
+    width: 25px;
+
+}
+
+.last__sub__pocket {
+
+    margin-bottom: -15px;
+
+}
+
+.businesses__card {
+
+    overflow-x: auto;
+
+}
+
+.businesses__card__row {
+
+    min-width: 300px;
+    overflow-x: auto;
+
+}
+
+.businesses__card__col {
+
+    border-radius: 0px 0px 0px 0px;
+    border: 2px solid #c3cfd9;
+
+}
+
+.date__created {
+
+    font-size: 12px;
+    font-weight: 500;
+    color: #7b8b98;
+
+}
+
+.approved {
+
+    font-size: 13px;
+    font-weight: 500; float: right;
+    color: #21b0a2;
+
+}
+
+.add__icon {
+
+    height: 30px;
+    width: 30px;
+    margin-top: -17px;
+
+}
+
+/* @media only screen and (min-width: 540px) { */
+
+    .edit {
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+    }
+
+    .date {
+
+        display: flex;
+        flex-direction: row;
+
+    }
+
+@media only screen and (min-width: 727px) { 
+
+    .create__business__account {
+
+       display: flex;
+       flex-direction: row;
+       justify-content: space-between;
+       margin-top: 40px;
+
+    }
+
+}
+
+@media only screen and (min-width: 683px) and (max-width: 726px) { 
+
+    .create__business__account {
+
+       display: flex;
+       flex-direction: row;
+       justify-content: space-between;
+       margin-top: 30px;
+
+    }
+
+}
+
+@media only screen and (min-width: 598px) and (max-width: 682px) { 
+
+    .create__business__account {
+
+       display: flex;
+       flex-direction: row;
+       justify-content: space-between;
+       margin-top: 40px;
+
+    }
+
+}
+
+@media only screen and (min-width: 576px) and (max-width: 597px) { 
+
+    .create__business__account {
+
+       display: flex;
+       flex-direction: row;
+       justify-content: space-between;
+       margin-top: 30px;
+
+    }
+
+}
+
+@media only screen and (max-width: 575px) { 
+
+    .create__business__account {
+
+       display: flex;
+       flex-direction: row;
+       justify-content: space-between;
+       margin-top: 10px;
+
+    }
+
+}
+

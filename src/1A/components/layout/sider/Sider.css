@@ -1,0 +1,699 @@
+/* Modal in case of screen size less than or equal to 767px */
+
+@media only screen and (max-width: 767px) {
+
+    .modal.left .modal-dialog {
+        
+        position: fixed;
+        margin: auto;
+        width: 256px;
+        height: 100%;
+        -webkit-transform: translate3d(0%, 0, 0);
+        -ms-transform: translate3d(0%, 0, 0);
+        -o-transform: translate3d(0%, 0, 0);
+        transform: translate3d(0%, 0, 0);
+
+    }
+
+    .modal.left .modal-content {
+
+        height: 100%;
+        overflow-y: auto;
+        background: linear-gradient(180deg, #1A3258 0%, #1761CE 100%);
+        /* sidebar shadow */
+        box-shadow: 6px 0px 18px rgba(0, 0, 0, 0.06);
+    
+    }
+
+    .modal.left .modal-body {
+
+        padding: 15px 15px 80px;
+
+    }
+
+    .modal.left.fade .modal-dialog {
+
+        left: -256px;
+        -webkit-transition: opacity 0.3s linear, left 0.3s ease-out;
+        -moz-transition: opacity 0.3s linear, left 0.3s ease-out;
+        -o-transition: opacity 0.3s linear, left 0.3s ease-out;
+        transition: opacity 0.3s linear, left 0.3s ease-out;
+
+    }
+
+    .modal.left.fade.show .modal-dialog {
+
+        left: 0;
+ 
+    }
+
+    .modal-header {
+
+        border-bottom: none !important;
+
+    }
+
+    .modal-footer {
+
+        border-top: none !important;
+
+    }
+
+}
+
+/* Sider in case of screen size greater than or equal to 768px */
+    
+@media only screen and (min-width: 768px) {
+
+    .sidebar__1A {
+
+        z-index: 1;
+        position: fixed;
+        width: 68px;
+        height: 100vh;
+        text-align: center; 
+        background: linear-gradient(180deg, #1A3258 0%, #1761CE 100%);
+        /* sidebar shadow */
+        box-shadow: 6px 0px 18px rgba(0, 0, 0, 0.06);
+    
+    }
+
+}
+
+@media only screen and (min-width: 768px) {
+
+    .open__sidebar__1A {
+
+        z-index: 1;
+        position: fixed;
+        width: 256px;
+        height: 100vh;
+        background: linear-gradient(180deg, #1A3258 0%, #1761CE 100%);
+        /* sidebar shadow */
+        box-shadow: 6px 0px 18px rgba(0, 0, 0, 0.06);
+
+    }
+
+}
+
+@media only screen and (max-width: 767px) {
+
+    .open__sidebar__1A {
+
+        z-index: 1;
+        position: fixed;
+        width: 500px;
+        height: 100vh;
+        background: linear-gradient(180deg, #1A3258 0%, #1761CE 100%);
+       /* sidebar shadow */
+       box-shadow: 6px 0px 18px rgba(0, 0, 0, 0.06);
+
+    }
+
+}
+    
+.sidebar__nav__1A {
+    
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    
+}
+
+.open__sidebar__nav__1A {
+
+    padding: 0;
+    list-style: none;
+
+}
+        
+.name__1A {
+
+    display: inline;
+    text-decoration: none;
+    margin-top: -43px;
+    font-family: Rubik;
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+
+}
+
+.email__1A {
+
+    margin-top: -18px;
+    font-family: Rubik;
+    font-size: 14px;
+    font-weight: 300;
+    color: white;
+    letter-spacing: 0.01em;
+
+}
+
+.hamburger__icon__1A__1 {
+
+    height: 20px;
+    width: 20px;
+    margin-left: -4.5px;
+    margin-top: 20px;
+    fill: black;
+
+}
+
+.hamburger__icon__1A__2 {
+
+    height: 20px;
+    width: 20px;
+    margin-left: -22px;
+    margin-top: -3px;
+    fill: white;
+
+}
+
+.hamburger__btn__1A {
+
+    background-color: transparent;
+    outline: none;
+    border: none;
+
+}
+
+.hamburger__icon__1A {
+
+    margin-top: 20px;
+    margin-left: -2.5px;
+    fill: white;
+
+}
+
+.hamburger__icon__open__1A {
+
+    margin-top: 20px;
+    margin-left: -2.5px;
+    fill: white;
+
+}
+
+.lp__logo__1A__1 {
+
+    margin-top: 6px;
+    margin-left: 15px;
+    height: 27px;
+    width: 140px;
+
+}
+
+.lp__logo__1A {
+
+    margin-top: 23px;
+    height: 27px;
+    width: 140px;
+    margin-bottom: -5px;
+    margin-left: 15px;
+
+}
+
+.user__avatar__1A__1 {
+
+    display: flex;
+    flex-direction: row;
+    margin-top: -13px;
+
+}
+
+.user__avatar__1A {
+
+    display: flex;
+    flex-direction: row;
+
+}
+
+.user__link__1A {
+
+    text-decoration: none;
+    color: black;
+
+}
+
+.user__info__1A__1 {
+
+    display: flex;
+    flex-direction: column;
+    margin-left: 55px;
+
+}
+
+.user__info__1A {
+
+    display: flex;
+    flex-direction: column;
+    margin-left: 70px;
+
+}
+
+.avatar__icon__1A {
+
+    height: 46px;
+    width: 46px;
+    margin-left: 11px;
+    fill: white;
+
+}
+
+.avatar__icon__open__1A__1 {
+
+    height: 46px;
+    width: 46px;
+    margin-left: -5px;
+    fill: white;
+
+}
+
+.avatar__icon__open__1A {
+
+    height: 46px;
+    width: 46px;
+    margin-left: 11px;
+    fill: white;
+
+}
+
+.generic__link022 {
+
+    margin-left: 70px;
+    margin-top: -23px;
+    font-size: 13px;
+
+}
+
+.generic__link02 {
+
+    margin-left: 86px;
+    margin-top: -23px;
+    font-size: 13px;
+
+}
+
+.generic__link033 {
+
+    margin-left: 101px;
+    margin-top: -28px;
+    font-size: 13px;
+    
+}
+
+.generic__link03 {
+
+    margin-left: 119px;
+    margin-top: -28px;
+    font-size: 13px;
+
+}
+
+.generic__link044 {
+
+    margin-left: 132px;
+    margin-top: -28px;
+    font-size: 13px;
+
+}
+
+.generic__link04 {
+
+    margin-left: 151px;
+    margin-top: -28px;
+    font-size: 13px;
+
+}
+
+/* Dashboard */
+
+.dashboard__icon__1A {
+
+    margin-top: 5px;
+    height: 20px;
+    width: 20px;
+
+}
+
+.dashboard__icon__open__1A {
+
+    margin-top: -26px;
+    height: 20px;
+    width: 20px;
+    margin-left: 24px;
+
+}
+
+.dashboard__icon__open__1A__1 {
+
+    margin-top: -17px;
+    height: 20px;
+    width: 20px;
+    margin-left: 7px;
+
+}
+
+.dashboard__link__1A {
+
+    margin-left: 55px;
+    margin-top: -32px;
+    font-family: Rubik;
+    font-size: 14px;
+    font-weight: 500;
+
+}
+
+.dashboard__link__1A__1 {
+
+    margin-left: 38px;
+    margin-top: -27px;
+    font-family: Rubik;
+    font-size: 14px;
+    font-weight: 500;
+
+}
+
+/* Financial Position */
+
+.businesses__icon__1A {
+
+    margin-top: 20px;
+    height: 20px;
+    width: 20px;
+
+}
+
+.businesses__icon__open__1A {
+
+    margin-top: -52px;
+    height: 20px;
+    width: 20px;
+    margin-left: 24px;
+
+}
+
+.businesses__icon__open__1A__1 {
+
+    margin-top: -47px;
+    height: 20px;
+    width: 20px;
+    margin-left: 7px;
+
+}
+
+.financial__position__link {
+
+    margin-left: 55px;
+    margin-top: -46px;
+    font-family: Rubik;
+    font-size: 14px;
+    font-weight: 500;
+
+}
+
+.financial__position__link__1 {
+
+    margin-left: 38px;
+    margin-top: -43px;
+    font-family: Rubik;
+    font-size: 14px;
+    font-weight: 500;
+
+}
+
+/* Members */
+
+.members__icon__1A {
+
+    height: 20px;
+    width: 20px;
+    margin-top: 20px;
+
+}
+
+.members__icon__1A__open {
+
+    height: 20px;
+    width: 20px;
+    margin-top: -50px;
+    margin-left: 24px;
+
+}
+
+.members__icon__1A__1 {
+
+    height: 20px;
+    width: 20px;
+    margin-left: 7px;
+    margin-top: -47px;
+
+}
+
+.members__link__1A {
+
+    margin-left: 55px;
+    margin-top: -44px;
+    font-family: Rubik;
+    font-size: 14px;
+    font-weight: 500;
+
+}
+
+.members__link__1A__1 {
+
+    margin-left: 38px;
+    margin-top: -42px;
+    font-family: Rubik;
+    font-size: 14px;
+    font-weight: 500;
+
+}
+
+/* Payees */
+
+.payees__icon__1A {
+
+    height: 20px;
+    width: 20px;
+    margin-top: 20px;
+
+}
+
+.payees__icon__open__1A {
+
+    margin-top: -52px;
+    height: 20px;
+    width: 20px;
+    margin-left: 24px;
+
+}
+
+.payees__icon__1A__1 {
+
+    height: 20px;
+    width: 20px;
+    margin-left: 7px;
+    margin-top: -47px;
+
+}
+
+.payees__link__1A {
+
+    margin-left: 55px;
+    margin-top: -46px;
+    font-family: Rubik;
+    font-size: 14px;
+    font-weight: 500;
+
+}
+
+.payees__link__1A__1 {
+
+    margin-left: 38px;
+    margin-top: -43px;
+    font-family: Rubik;
+    font-size: 14px;
+    font-weight: 500;
+
+}
+
+/* Pockets */
+
+.pockets__icon__1A {
+
+    height: 20px;
+    width: 20px;
+    margin-top: 20px;
+
+}
+
+.pockets__icon__open__1A {
+
+    height: 20px;
+    width: 20px;
+    margin-left: 24px;
+    margin-top: -50px;
+
+}
+
+.pockets__icon__1A__1 {
+
+    height: 20px;
+    width: 20px;
+    margin-left: 7px;
+    margin-top: -47px;
+
+}
+
+.pockets__link__1A {
+
+    margin-left: 55px;
+    margin-top: -45px;
+    font-family: Rubik;
+    font-size: 14px;
+    font-weight: 500;
+
+}
+
+.pockets__link__1A__1 {
+
+    margin-left: 38px;
+    margin-top: -43px;
+    font-family: Rubik;
+    font-size: 14px;
+    font-weight: 500;
+
+}
+
+/* Divider */
+
+.divider__1A {
+
+    border-top: 2px solid rgba(255,255,255,.5); 
+    margin-top: 38px; 
+    background-color: #9eadba;
+
+}
+
+.divider__open__1A {
+
+    border-top: 2px solid rgba(255,255,255,.5); 
+    margin-top: 37px; 
+    background-color: #9eadba;
+
+}
+
+.divider__open__1A__1 {
+
+    border-top: 2px solid rgba(255,255,255,.5); 
+    margin-top: 36px; 
+    background-color: #9eadba;
+    margin-left: -15px;
+    margin-right: -15px;
+    
+}
+
+/* Global Payees */
+
+.global__payees__icon {
+
+    margin-top: -17px;
+    height: 20px;
+    width: 20px;
+
+}
+
+.global__payees__icon__open {
+
+    margin-top: -19px;
+    height: 20px;
+    width: 20px;
+    margin-left: 24px;
+
+}
+
+.global__payees__icon__1 {
+
+    margin-top: -19px;
+    height: 20px;
+    width: 20px;
+    margin-left: 7px;
+
+}
+
+.global__payees__link {
+
+    margin-left: 55px;
+    margin-top: -28px;
+    font-family: Rubik;
+    font-size: 14px;
+    font-weight: 500;
+
+}
+
+.global__payees__link__1 {
+
+    margin-left: 38px;
+    margin-top: -28px;
+    font-family: Rubik;
+    font-size: 14px;
+    font-weight: 500;
+
+}
+
+/* Log Out */
+
+.log__out__icon__1A {
+
+    margin-top: 20px;
+    height: 20px;
+    width: 20px;
+    margin-left: -5px;
+
+}
+
+.log__out__icon__open__1A {
+
+    margin-top: -34px;
+    height: 20px;
+    width: 20px;
+    margin-left: 22px;
+
+}
+
+.log__out__icon__open__1A__1 {
+
+    margin-top: -34px;
+    height: 20px;
+    width: 20px;
+    margin-left: 5px;
+
+}
+
+.log__out__link__1A {
+
+    margin-left: 55px;
+    margin-top: -37px;
+    font-family: Rubik;
+    font-size: 14px;
+    font-weight: 500;
+
+}
+
+.log__out__link__1A__1 {
+
+    margin-left: 38px;
+    margin-top: -37px;
+    font-family: Rubik;
+    font-size: 14px;
+    font-weight: 500;
+
+}
+
+/* This is the css class as a sample if you want to remove box-shadow or outline from a button element on focus */
+
+/* .testing:focus {
+    box-shadow: none !important;
+    outline: 0 !important;
+} */

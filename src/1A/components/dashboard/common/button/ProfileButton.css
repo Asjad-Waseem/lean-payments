@@ -1,0 +1,17 @@
+.profile__btn {
+
+    background: linear-gradient(180deg, #1A3359 -151.43%, #1854AD 100%);
+    border-radius: 5px;
+    height: 35px;
+    margin-top: 15px;
+
+}
+
+.profile__btn__txt {
+
+    font-family: Poppins;
+    font-size: 13px;
+    font-weight: 600;
+    white-space: nowrap;
+
+}

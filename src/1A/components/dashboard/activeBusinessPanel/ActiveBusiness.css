@@ -1,0 +1,88 @@
+.active__business {
+    
+    font-family: Rubik;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 30px;
+    letter-spacing: 0.15px;
+    
+}
+    
+.active__business__table__row {
+
+    overflow-x: auto;
+    
+}
+    
+.active__businesss__table__row__inner {
+    
+    background-color: #ffffff;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 0.25rem;
+    
+}
+
+.active__business__table__col {
+    
+    background-color: #ffffff;
+    
+}
+
+.active__business__header {
+
+    font-family: Poppins;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 0.01em;
+    color: #334D6E;
+    opacity: 0.5;
+    
+}
+
+.active__business__record {
+
+    font-family: Poppins;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 0.01em;
+    color: #323C47;
+
+}
+
+.edit__active__business {
+
+    color: #323C47;
+    
+}
+
+.switch__active__business__row {
+
+    float: right;
+
+}
+
+.switch__active__business__drpdwn {
+
+    border-radius: 5px;
+    margin-top: 15px;
+    font-family: Poppins;
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    white-space: nowrap !important;
+    
+}
+    
+.white__space {
+    
+    white-space: nowrap;
+    
+}
+
+
+
+
+    
+
+
+
+    

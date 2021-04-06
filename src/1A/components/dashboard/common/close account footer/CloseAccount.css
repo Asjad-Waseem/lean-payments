@@ -1,0 +1,22 @@
+.close__account {
+
+    font-size: 14px;
+    font-family: Poppins;
+    /* padding-bottom: 0;
+    position: fixed; */
+
+}
+
+.close__account__txt {
+
+    font-weight: 300;
+    color: #535355;
+
+}
+
+.close__account__link {
+
+    font-weight: 400;
+    color: #2c62b2;
+
+}

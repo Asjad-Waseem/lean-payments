@@ -1,0 +1,51 @@
+@media only screen and (min-width: 675px) {
+
+.space__between__flex__dashboard {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+}
+
+@media only screen and (max-width: 674px) {
+
+    .space__between__flex__dashboard {
+    
+        display: flex;
+        flex-direction: column;
+    
+    }
+    
+}
+
+.column__flex {
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+.greeting__name {
+
+    font-family: Rubik;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 30px;
+    letter-spacing: 0.15px;
+
+}
+
+.greeting__statement {
+
+    font-family: Rubik;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 21px;
+    letter-spacing: 0.25px;
+    color: rgba(0, 0, 0, 0.6);
+
+}
+

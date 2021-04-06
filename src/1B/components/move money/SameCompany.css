@@ -1,0 +1,130 @@
+.same__company {
+
+    background-color: #ffffff;
+   
+}
+
+.same__company__page__content__1 {
+
+    width: 100%;
+    padding-left: 68px;
+    position: relative;
+    background-color: #ffffff;
+    top: -16px;
+ 
+}
+ 
+.same__company__page__content {
+
+   width: 100%;
+   padding-left: 68px;
+   position: relative;
+   background-color: #ffffff;
+   top: 20px;
+
+}
+
+.same__company__page__content__open {
+
+   width: 100%;
+   position: relative;
+   padding-left: 256px;
+   background-color: #ffffff;
+   top: 20px;
+
+}
+
+.same__company__layout__container {
+
+    background-color: #ffffff;
+ 
+ }
+
+ .same__company__container__col {
+
+    margin-right: 20px;
+
+ }
+
+ .black__link {
+
+    color: black;
+
+ }
+
+.previous__arrow {
+
+    height: 25px;
+    width: 25px;
+
+}
+
+.font__bold {
+
+    font-weight: bold;
+
+}
+
+.sub__heading {
+
+    color: #81909d;
+    font-size: 13px;
+
+}
+
+.font__13 {
+
+    font-size: 13px;
+
+}
+
+.font__14 {
+
+    font-size: 14px;
+
+}
+
+.table__filters__from {
+
+    background-color: #f7f9fa;
+    color: #cad5de;
+    font-size: 14px;
+
+}
+
+.amount {
+
+    height: 35.5px;
+    font-size: 14px;
+
+}
+
+.review__confirm__btn {
+
+    color: #2c88d9;
+    font-size: 14px;
+    font-weight: 500;
+
+}
+
+.review__confirm__icon {
+
+    height: 20px;
+    width: 20px;
+    
+}
+
+.vertical__divider {
+
+    height: 100vh;
+    width: 0px;
+    margin-top: -23px;
+    background-color: #9eadba;
+    border-left: 2px solid rgba(255,255,255,.5);
+
+}
+
+
+
+
+

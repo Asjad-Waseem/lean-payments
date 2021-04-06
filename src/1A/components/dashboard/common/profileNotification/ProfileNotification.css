@@ -1,0 +1,97 @@
+.space__between__flex__profile__notification {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.row__flex__profile__notification {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.text__light {
+
+    color: #ffffff;
+
+}
+
+.text__dark {
+
+    color: black;
+
+}
+
+.arrow__icons__container {
+
+    margin-top: -3px;
+
+}
+
+.arrow__icons__profile__notification {
+
+    height: 15px;
+    width: 15px;
+
+}
+
+.profile__notification {
+
+    font-family: Rubik;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 0.01em;
+    color: #535355;
+    margin-top: 0px !important;
+
+}
+
+.profile__notification__description {
+
+    font-family: Rubik;
+    font-weight: 300;
+    font-size: 14px;
+    color: #535355;
+
+}
+
+.add__members__link {
+
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+
+}
+
+.notifications__btn {
+
+    margin-left: 35px;
+    margin-bottom: 14px;
+    margin-top: -10px;
+    
+}
+
+/* .business__profile__btn__txt {
+
+    font-family: Poppins;
+    font-size: 13px;
+    font-weight: 600;
+    white-space: nowrap;
+
+} */
+
+/* .business__profile__btn {
+
+    background: linear-gradient(180deg, #1A3359 -151.43%, #1854AD 100%);
+    border-radius: 20px 20px 20px 20px !important;
+    height: 35px;
+    margin-top: 5px;
+    margin-left: 35px;
+    margin-bottom: 14px;
+
+} */
+

@@ -1,0 +1,28 @@
+.identification {
+
+    display: flex;
+    flex-direction: row;
+
+}
+
+.identification__heading {
+
+    font-family: Rubik;
+    font-weight: 500;
+    font-size: 24px;
+    letter-spacing: 0.01em;
+    color: #000000;
+
+}
+
+.edit__icon {
+
+    fill: #1a3969;
+  
+}
+
+.generic__drpdown.form-control.is-invalid, .generic__date.form-control.is-invalid {
+
+    background-position: right calc(1.5rem + .1875rem) center !important;
+
+}
