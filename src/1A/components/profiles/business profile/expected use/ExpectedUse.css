@@ -1,11 +1,11 @@
-.incorporation__details {
+.expected__use__details {
 
     display: flex;
     flex-direction: row;
 
 }
 
-.incorporation__details__heading {
+.expected__use__details__heading {
 
     font-family: Rubik;
     font-weight: 500;

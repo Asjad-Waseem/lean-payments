@@ -91,9 +91,9 @@ function ExpectedUse() {
 
                 <Col>
 
-                <Card.Title className = "incorporation__details">
+                <Card.Title className = "expected__use__details">
                   
-                  <p className = "incorporation__details__heading">Expected Use</p>
+                  <p className = "expected__use__details__heading">Expected Use</p>
 
                   {!edit ?
 
