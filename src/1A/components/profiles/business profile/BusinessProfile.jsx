@@ -6,13 +6,14 @@ import { Container, Row, Col } from 'react-bootstrap';
 import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
 
-import Sider from '../../layout/sider/Sider';
+import Sider from '../../../../layout/Sider';
 import BasicInformation from '../business profile/basic information/BasicInformation';
 import BusinessAddress from '../business profile/business address/BusinessAddress';
 import BankInformation from '../business profile/bank information/BankInformation';
 import IncorporationDetails from '../business profile/incorporation details/IncorporationDetails';
 import ExpectedUse from '../business profile/expected use/ExpectedUse';
 
+import ImportantNotice from './important notice/ImportantNotice';
 import CloseAccount from '../../dashboard/common/close account footer/CloseAccount';
 
 import '../Profile.css';
@@ -90,13 +91,13 @@ function BusinessProfile() {
 
                             <Row>
 
-                                <div className = "profile__links profile__links__layout">
+                                <div className = "profile__links business__profile__links__layout">
                                     
                                     <Link to = "/business-profile" style = {{color: step_1_color}} onClick = {onBasicInformationStep}>Basic Information</Link>
-                                    <Link to = "/business-profile" className = {width > 507 ? "ml-3" : "mt-1"} style = {{color: step_2_color}} onClick = {onBusinessAddressStep}>Business Address</Link>
-                                    <Link to = "/business-profile" className = {width > 507 ? "ml-3" : "mt-1"} style = {{color: step_3_color}} onClick = {onBankInformationStep}>Bank Information</Link>
-                                    <Link to = "/business-profile" className = {width > 507 ? "ml-3" : "mt-1"} style = {{color: step_4_color}} onClick = {onIncorporationDetailsStep}>Incorporation Details</Link>
-                                    <Link to = "/business-profile" className = {width > 507 ? "ml-3" : "mt-1"} style = {{color: step_5_color}} onClick = {onExpectedUseStep}>Expected Use</Link>
+                                    <Link to = "/business-profile" className = {width > 865 ? "ml-3" : "mt-1"} style = {{color: step_2_color}} onClick = {onBusinessAddressStep}>Business Address</Link>
+                                    <Link to = "/business-profile" className = {width > 865 ? "ml-3" : "mt-1"} style = {{color: step_3_color}} onClick = {onBankInformationStep}>Bank Information</Link>
+                                    <Link to = "/business-profile" className = {width > 865 ? "ml-3" : "mt-1"} style = {{color: step_4_color}} onClick = {onIncorporationDetailsStep}>Incorporation Details</Link>
+                                    <Link to = "/business-profile" className = {width > 865 ? "ml-3" : "mt-1"} style = {{color: step_5_color}} onClick = {onExpectedUseStep}>Expected Use</Link>
 
                                 </div>
 
@@ -136,6 +137,14 @@ function BusinessProfile() {
                               
                               : null}
                               
+                            </Row>
+
+                            <br/>
+
+                            <Row>
+
+                                <ImportantNotice />
+
                             </Row>
 
                             {/* <br/>

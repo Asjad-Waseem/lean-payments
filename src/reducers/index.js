@@ -1,6 +1,7 @@
 import { combineReducers } from 'redux';
 import collapsedReducer from './collapsedReducer';
 import siderLinkColorsReducer from './siderLinkColors';
+import dashboardReducer from './dashboardReducer';
 import personalProfileStateReducer from './personalProfileStateReducer';
 import businessProfileStateReducer from './businessProfileStateReducer';
 import personalProfileDataReducer from './personalProfileDataReducer';
@@ -16,7 +17,7 @@ const persistConfig = {
 
     key: 'root',
     storage,
-    whitelist: ['siderLinks', 'personalProfileState', 'businessProfileState']
+    whitelist: ['siderLinks', 'personalProfileState', 'businessProfileState', 'dashboard']
 
 }
 
@@ -24,6 +25,7 @@ const rootReducer = combineReducers ({
 
     collapsed: collapsedReducer,
     siderLinks: siderLinkColorsReducer,
+    dashboard: dashboardReducer,
     personalProfileState: personalProfileStateReducer,
     personalProfileData: personalProfileDataReducer,
     peronslAddressDetails: personalAddressDetailsReducer,

@@ -48,7 +48,7 @@ function BusinessProfileNotification(props) {
 
             {businessProfile ? <p className = "profile__notification__description">Please confirm all members have been added to this business.
                 <br/>
-                In order to manage international payments, all board of directors and stakeholders with more than 25% ownership must be added, if not, click <Link to = "/dashboard" className = "add__members__link">here</Link> to add members.
+                In order to manage international payments, all board of directors and stakeholders with more than 25% ownership must be added, if not, click <Link to = "/add-members" className = "add__members__link">here</Link> to add members.
                 </p> : null}    
 
         </Row>  

@@ -1,11 +1,37 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
 
 import { Row, Col, Card, Form, Table } from 'react-bootstrap';
 
 import './ActiveBusiness.css';
 
+import { switchActiveBusiness } from '../../../../actions/dashboardActions';
+
 function ActiveBusiness() {
+
+// The useSelector Redux hook will get the details of the currently selectec/active business, so you get all these details related to the active business from the API end point and simply add them over here. Make sure to persist this active business in ./reducers/index.js in whitelist reducers array so that te data doesn't get lost im all cases.
+
+// const activeBusinessDetails = useSelector(state => state.activeBusinessDetails);
+
+// This will disptach the selected active business option, so ideally based on this selected option, your API should return the updated details of the new active business and you should map them accordingly. 
+
+const dispatch = useDispatch();
+
+const onSwitchActiveBusiness = (event) => {
+
+    if(event.target.value) {
+
+        // Dummy values only for testing, you need to put the actual ones here based on whatever id and name you decided to pass to make the API call.
+
+        const businessName = "Kevin L.L.C";
+        const _id = "11";
+
+        dispatch(switchActiveBusiness(businessName, _id));
+
+    }
+
+}
 
   return (
     
@@ -49,8 +75,9 @@ function ActiveBusiness() {
                                                     className="switch__active__business__drpdwn mr-sm-2"
                                                     id="inlineFormCustomSelect"
                                                     custom
+                                                    onChange = {onSwitchActiveBusiness}
                                                 >
-                                                    <option value="">Switch Active Business</option>
+                                                    <option value="" >Switch Active Business</option>
                                                     <option value="Kevin L.L.C">Kevin L.L.C</option>
                                                     <option value="Kevin L.L.C">Kevin L.L.C</option>
                                                     <option value="Kevin L.L.C">Kevin L.L.C</option>

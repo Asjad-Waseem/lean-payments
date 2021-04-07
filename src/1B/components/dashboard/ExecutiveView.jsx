@@ -12,7 +12,7 @@ import { CgChevronRightO } from 'react-icons/cg';
 
 import './ExecutiveView.css';
 
-import Sider from '../layout/sider/Sider';
+import Sider from '../../../layout/Sider';
 
 import tooltip from '../../assets/tooltip.svg';
 import Transfer from '../../assets/transfer.svg';

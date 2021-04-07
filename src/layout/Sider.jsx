@@ -20,9 +20,9 @@ import { collapsedState,
          selectMembers,
          selectPayees,
          selectPockets,
-         selectGlobalPayees } from '../../../../actions/siderbarActions';
+         selectGlobalPayees } from '../actions/siderbarActions';
 
-import logo from '../../../../1B/assets/Logo w.text Wht.svg';
+import logo from '../1B/assets/Logo w.text Wht.svg';
 
 function getWindowDimensions() {
   const { innerWidth: width } = window;
@@ -140,7 +140,7 @@ function Sider() {
 
            <br/>
 
-            <Link to = {url} style = {{color: financialPositionColor}} onClick = { onSelectFinancialPosition }>
+            <Link to = "/dashboard/executive-view" style = {{color: financialPositionColor}} onClick = { onSelectFinancialPosition }>
 
               <IoIosBusiness className = "businesses__icon__open__1A__1"/>
 
@@ -269,7 +269,7 @@ function Sider() {
 
             <br/>
 
-            <Link to = {url} style = {{color: financialPositionColor}} onClick = {() => { onSelectFinancialPosition(); }}>
+            <Link to = "/dashboard/executive-view" style = {{color: financialPositionColor}} onClick = {() => { onSelectFinancialPosition(); }}>
 
              {collapsed ? <IoIosBusiness className = "businesses__icon__1A"/> : <IoIosBusiness className = "businesses__icon__open__1A"/>}
          

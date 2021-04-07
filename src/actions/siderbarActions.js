@@ -18,41 +18,11 @@ export const selectDashboard = () => {
 
 };
 
-export const selectBusinesses = () => {
-
-      return{
-
-          type: "SELECT_BUSINESSES",
-
-      }
-
-};
-
 export const selectFinancialPosition = () => {
 
     return{
 
         type: "SELECT_FINANCIAL_POSITION",
-
-    }
-
-};
-
-export const createABusiness = () => {
-
-    return{
-
-        type: "SELECT_CREATE_A_BUSINESS",
-
-    }
-
-};
-
-export const selectKoolCompany = () => {
-
-    return{
-
-        type: "SELECT_KOOL_COMPANY",
 
     }
 
@@ -93,36 +63,6 @@ export const selectPockets = () => {
     return{
 
         type: "SELECT_POCKETS",
-
-    }
-
-};
-
-export const selectOpex = () => {
-
-    return{
-
-        type: "SELECT_OPEX",
-
-    }
-
-};
-
-export const selectTax = () => {
-
-    return{
-
-        type: "SELECT_TAX",
-
-    }
-
-};
-
-export const selectOwnersComp = () => {
-
-    return{
-
-        type: "SELECT_OWNERS_COMP",
 
     }
 

@@ -11,7 +11,7 @@ import './NewPocketsModal.css';
 
 import { IoCloseSharp } from 'react-icons/io5';
 
-import Sider from '../layout/sider/Sider';
+import Sider from '../../../layout/Sider';
 
 function getWindowDimensions() {
     const { innerWidth: width } = window;

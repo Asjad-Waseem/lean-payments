@@ -152,7 +152,7 @@ function Identification() {
 
                 {!edit ? 
 
-                <Col className = "" style = {{marginTop: "56px"}} >
+                <Col style = {{marginTop: "56px"}} >
 
                     <InfoField title = "Date of Birth" info = "12/29/1996"/>
                     <InfoField title = "Citizenship" info = "Canada"/>

@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 
@@ -13,13 +13,15 @@ import './ExpectedUse.css';
 import InfoField from '../../personal profile/info field/InfoField';
 
 import Country from '../../../../../data/countries.json';
-import States from '../../../../../data/usaStates.json';
 
 import { submitExpectedUseDetails } from '../../../../../actions/businessProfileActions';
 
 function ExpectedUse() {
 
   const [ edit, setEditState ] = useState(false);
+  const [ transactionCountriesError, setTransactionCountriesError ] = useState("");
+
+  let transactionCountries = [];
 
   const editState = () => {
 
@@ -27,41 +29,48 @@ function ExpectedUse() {
 
   }
 
-  const { register, errors, watch, handleSubmit, reset } = useForm();
+  const onSelect = (selectedList) => {
 
-  const businessIncorporationDate = useRef();
-  const countryOfJurisdication = useRef();
+    transactionCountries = selectedList;
 
-  businessIncorporationDate.current = watch("businessIncorporationDate", "");
-  countryOfJurisdication.current = watch("countryOfJurisdication", "");
-
-  var currentDate = new Date();
-  let businessIncorporationDate1 = new Date(businessIncorporationDate.current);
-
-  let currentDateTime = currentDate.getTime();
-  let businessIncorporationDateTime = businessIncorporationDate1.getTime();
-
-  let businessIncorporationDateError = "";
-
-  if(currentDateTime < businessIncorporationDateTime) {
-
-    businessIncorporationDateError = "Business Incorporation Date cannot be greater than today's date";
+    setTransactionCountriesError("");
 
   }
+
+  const onRemove = (selectedList) => {
+
+    transactionCountries = selectedList;
+
+    if(transactionCountries.length < 1) {
+
+        setTransactionCountriesError("This field is required");
+    
+    }
+    
+  }
+
+  const validateCountries = () => {
+
+    if(transactionCountries.length < 1) {
+
+        setTransactionCountriesError("This field is required");
+
+    }
+
+  }
+
+  const { register, errors, handleSubmit, reset } = useForm();
 
   const dispatch = useDispatch();
 
   const onSubmit = (expectedUseDetails) => {
 
-    if( !businessIncorporationDateError ) {
-
           const finalData = {
 
-              businessRegistrationNumber: expectedUseDetails.businessRegistrationNumber,
-              businessIncorporationDate: expectedUseDetails.businessIncorporationDate,
-              countryOfJurisdication: expectedUseDetails.countryOfJurisdication,
-              provinceState: expectedUseDetails.provinceState,
-              businessLegalStructure: expectedUseDetails.businessLegalStructure
+              purposeOfPayments: expectedUseDetails.purposeOfPayments,
+              expectedNumberOfMonthlyPayments: expectedUseDetails.expectedNumberOfMonthlyPayments,
+              expectedMonthlyTradeVolume: expectedUseDetails.expectedMonthlyTradeVolume,
+              expectedCountriesOfTransaction: transactionCountries
              
           }
 
@@ -70,8 +79,6 @@ function ExpectedUse() {
     reset();
 
     setEditState(false);
-
-  }
 
 }
 
@@ -86,7 +93,7 @@ function ExpectedUse() {
 
                 <Card.Title className = "incorporation__details">
                   
-                  <p className = "incorporation__details__heading">Incorporation Details</p>
+                  <p className = "incorporation__details__heading">Expected Use</p>
 
                   {!edit ?
 
@@ -115,7 +122,7 @@ function ExpectedUse() {
 
                   {!edit ? 
 
-                      <Col className = "" style = {{marginTop: "56px"}} >
+                      <Col md style = {{marginTop: "56px"}} >
 
                           <div className = "auto__approval">
                               <InfoField title = "Auto - Approval Value" info = "Not Set"/>
@@ -140,44 +147,42 @@ function ExpectedUse() {
 
             {edit ? 
 
+                <form onSubmit={handleSubmit(onSubmit)} as = {Row}>
 
-                  <form onSubmit={handleSubmit(onSubmit)} as = {Row}>
+                    <Form.Group>
 
-                  <Form.Group>
+                        <Row>
 
-                      <Row>
+                            <Col md = "4">
 
-                    <Col md = "4">
-
-
-                    <Form.Label className = "input__label">Purpose of Payments</Form.Label>
-                    <Form.Control 
-                                          as="select"
-                                          className = {errors.purposeOfPayments ? "generic__drpdown is-invalid" : "generic__drpdwn"} 
-                                          name = "purposeOfPayments" 
-                                          ref={register( { required: "Select Purpose of Payments" } ) }
-                                      >
-                                          <option value = "">Select Purpose of Payments</option>
-                                          <option value = "Sending Payments">Sending Payments</option>
-                                          <option value = "Receiving Payments">Receiving Payments</option>
-                                          <option value = "Currency Exchange">Currency Exchange</option>
-                                          <option value = "Sending and Receiving Payments">Sending and Receiving Payments</option>
+                                <Form.Label className = "input__label">Purpose of Payments</Form.Label>
+                                    <Form.Control 
+                                        as="select"
+                                        className = {errors.purposeOfPayments ? "generic__drpdown is-invalid" : "generic__drpdwn"} 
+                                        name = "purposeOfPayments" 
+                                        ref={register( { required: "Select Purpose of Payments" } ) }
+                                    >
+                                        <option value = "">Select Purpose of Payments</option>
+                                        <option value = "Sending Payments">Sending Payments</option>
+                                        <option value = "Receiving Payments">Receiving Payments</option>
+                                        <option value = "Currency Exchange">Currency Exchange</option>
+                                        <option value = "Sending and Receiving Payments">Sending and Receiving Payments</option>
                                         
-                                      </Form.Control>
-                                          <div className = "text-danger">
-                                              {errors.purposeOfPayments && errors.purposeOfPayments.type === "required" && <span>This field is required</span>}
-                                          </div>
+                                    </Form.Control>
+                                        <div className = "text-danger">
+                                            {errors.purposeOfPayments && errors.purposeOfPayments.type === "required" && <span>This field is required</span>}
+                                        </div>
 
-                                          <br/>
+                                        <br/>
     
-                            <Form.Label className = "input__label">Expected Number of Monthly Payments</Form.Label>
-                            <Form.Control 
-                                className = {errors.expectedNumberOfMonthlyPayments  ? "expected is-invalid" : "expected"} 
-                                type = "number" 
-                                name = "expectedNumberOfMonthlyPayments" 
-                                placeholder="Expected Number of Monthly Payments" 
-                                ref={register( { required: true } ) }
-                                />
+                                <Form.Label className = "input__label">Expected Number of Monthly Payments</Form.Label>
+                                    <Form.Control 
+                                        className = {errors.expectedNumberOfMonthlyPayments  ? "expected is-invalid" : "expected"} 
+                                        type = "number" 
+                                        name = "expectedNumberOfMonthlyPayments" 
+                                        placeholder="Expected Number of Monthly Payments" 
+                                        ref={register( { required: true } ) }
+                                    />
                                 <div className = "text-danger">
                                     {errors.expectedNumberOfMonthlyPayments && errors.expectedNumberOfMonthlyPayments.type === "required" && <span>This field is required</span>}
                                 </div>
@@ -185,12 +190,12 @@ function ExpectedUse() {
                                 <br/>
 
                                 <Form.Label className = "input__label">Expected Monthly Trade Volume</Form.Label>
-                            <Form.Control 
-                                className = {errors.expectedMonthlyTradeVolume  ? "expected is-invalid" : "expected"} 
-                                type = "number" 
-                                name = "expectedMonthlyTradeVolume" 
-                                placeholder="Expected Monthly Trade Volume" 
-                                ref={register( { required: true } ) }
+                                    <Form.Control 
+                                        className = {errors.expectedMonthlyTradeVolume  ? "expected is-invalid" : "expected"} 
+                                        type = "number" 
+                                        name = "expectedMonthlyTradeVolume" 
+                                        placeholder="Expected Monthly Trade Volume" 
+                                        ref={register( { required: true } ) }
                                 />
                                 <div className = "text-danger">
                                     {errors.expectedMonthlyTradeVolume && errors.expectedMonthlyTradeVolume.type === "required" && <span>This field is required</span>}
@@ -198,41 +203,31 @@ function ExpectedUse() {
 
                                 <br/>
 
-                        <Form.Label className = "input__label">Country/Jurisdication of Incorporation</Form.Label>
+                                <Form.Label className = "input__label">Expected Countries of Transaction</Form.Label>
     
-                        <Multiselect
-  options={Country.CountryNames}
-  displayValue="name"
-  showCheckbox={true}
-/>
+                                    <Multiselect
 
-                           
-                            {/* <Form.Control 
-                                as="select"
-                                className = {errors.countryOfJurisdication ? "country__drpdown is-invalid" : "country__drpdown"} 
-                                name = "countryOfJurisdication" 
-                                ref={register ( { required: true } ) }
-                                >
-                                <option value = "">
-Select Country</option>
+                                        options={Country.CountryNames}
+                                        name = "transactionCountries"
+                                        onSelect = {onSelect}
+                                        onRemove = {onRemove}
+                                        displayValue="name"
+                                        showCheckbox={true}
+                                    />
 
-                                  { Country.CountryNames.map((result) => (<option text = {result.code}>{result.name}</option>)) } 
-
-
-                             </Form.Control> 
-          <div className = "text-danger">
-                                    {errors.countryOfJurisdication && errors.countryOfJurisdication.type === "required" && <span>This field is required</span>}
+                                <div className = "text-danger">
+                                    {transactionCountriesError}      
                                 </div>
 
-                                  <br/> */}
+                                <br/> 
 
-                                </Col>
+                            </Col>
 
-                                </Row>
+                        </Row>
 
                     </Form.Group>
 
-                    <Button className = "save__btn" type="submit">
+                    <Button className = "save__btn" type="submit" onClick = {validateCountries}>
                         <p className = "save__btn__txt">Save</p>
                     </Button>
 

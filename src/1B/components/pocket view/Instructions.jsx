@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import { Container, Row, Col, OverlayTrigger, Tooltip, Button, Form, Table } from 'react-bootstrap';
-import Sider from '../layout/sider/Sider';
+
+import Sider from '../../../layout/Sider';
 import LineChart from './line chart/LineChart';
 import Opex from '../../assets/businesses.png';
 import tooltip from '../../assets/tooltip.svg';

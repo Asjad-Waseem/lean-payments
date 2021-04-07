@@ -19,10 +19,29 @@
 
     display: flex;
     flex-direction: row;
+
+}
+
+._2iA8p44d0WZ-WqRBGcAuEV {
+
+    border: none;
+    border-bottom: 1px solid #D3D8DD;
     
 }
 
-.business__registration__number.form-control.is-invalid {
+._7ahQImyV4dj0EpcNOjnwA {
+
+    background: linear-gradient(180deg, #1A3359 -151.43%, #1854AD 100%);
+
+}
+
+.lhyQmCtWOINviMz0WG_gr {
+
+    background: linear-gradient(180deg, #1A3359 -151.43%, #1854AD 100%);
+
+}
+
+.expected.form-control.is-invalid {
 
     background-position: right calc(1.5rem + .1875rem) center !important;
 

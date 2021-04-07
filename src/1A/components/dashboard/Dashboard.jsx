@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux';
 
 import './Dashboard.css';
 
-import Sider from '../layout/sider/Sider';
+import Sider from '../../../layout/Sider';
 import Greeting from './greeting/Greeting';
 import PersonalProfileNotification from './common/profileNotification/PersonalProfileNotification';
 import BusinessProfileNotification from './common/profileNotification/BusinessProfileNotification';

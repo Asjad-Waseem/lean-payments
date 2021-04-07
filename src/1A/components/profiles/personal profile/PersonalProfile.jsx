@@ -6,7 +6,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
 
-import Sider from '../../layout/sider/Sider';
+import Sider from '../../../../layout/Sider';
 import PersonalDetails from './personal details/PersonalDetails';
 import PersonalAddress from './personal address/PersonalAddress';
 import Identification from './identification/Identification';

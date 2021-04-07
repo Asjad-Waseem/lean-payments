@@ -18,10 +18,6 @@ import ExecutiveView from './1B/components/dashboard/ExecutiveView';
 import NewPockets from './1B/components/kool company/NewPockets';
 import SameCompany from './1B/components/move money/SameCompany';
 
-// Font Testing Components
-
-import abc from './1A/abc/abc';
-
 function App() {
 
   return (
@@ -39,7 +35,6 @@ function App() {
                     <Route exact path = "/kool-company/newly-created-pockets" component = {NewPockets} />
                     <Route exact path = "/move-money/within-same-company" component = {SameCompany} />
 
-                    <Route exact path = "/abc" component = {abc} />
                     <Route exact path = "/dashboard" component = {Dashboard1A} />
                     <Route exact path = "/personal-profile" component = {PersonalProfile} />
                     <Route exact path = "/business-profile" component = {BusinessProfile} />

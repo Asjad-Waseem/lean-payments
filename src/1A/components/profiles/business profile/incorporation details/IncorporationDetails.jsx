@@ -11,7 +11,6 @@ import './IncorporationDetails.css';
 import InfoField from '../../personal profile/info field/InfoField';
 
 import Country from '../../../../../data/countries.json';
-import States from '../../../../../data/usaStates.json';
 
 import { submitIncorporationDetails } from '../../../../../actions/businessProfileActions';
 
@@ -180,31 +179,6 @@ function IncorporationDetails() {
                                           <option value = "Prince Edward Island">Prince Edward Island</option>
                                           <option value = "Quebec">Quebec</option>
                                           <option value = "Saskatchewan">Saskatchewan</option>
-
-                                      </Form.Control>
-                                          <div className = "text-danger">
-                                              {errors.provinceState && errors.provinceState.type === "required" && <span>This field is required</span>}
-                                          </div>
-
-                                          <br/>
-
-                                  </>
-
-                                  : 
-                                  
-                                  countryOfJurisdication.current === "United States" ?
-
-                                  <>
-
-                                      <Form.Control 
-                                          as="select"
-                                          className = {errors.provinceState ? "generic__drpdown is-invalid" : "generic__drpdwn"} 
-                                          name = "provinceState" 
-                                          ref={register( { required: "Select State" } ) }
-                                      >
-                                          <option value = "">Select State</option>
-                                          <option value = "None">None</option>
-                                              { States.states.map((result) => (<option text = {result}>{result}</option>)) }
 
                                       </Form.Control>
                                           <div className = "text-danger">

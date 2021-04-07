@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 import { useSelector } from 'react-redux';
-import Sider from '../layout/sider/Sider';
+
+import Sider from '../../../layout/Sider';
 
 import { IoMdArrowRoundBack } from 'react-icons/io';
 import { MdRateReview } from 'react-icons/md';
