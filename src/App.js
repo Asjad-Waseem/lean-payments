@@ -11,6 +11,8 @@ import './App.css';
 import Dashboard1A from './1A/components/dashboard/Dashboard';
 import PersonalProfile from './1A/components/profiles/personal profile/PersonalProfile';
 import BusinessProfile from './1A/components/profiles/business profile/BusinessProfile';
+import Members from './1A/components/members/Members';
+import MemberInfo from './1A/components/members/member info/MemberInfo';
 
 // Components Import 1B
 import Instructions from './1B/components/pocket view/Instructions';
@@ -38,6 +40,8 @@ function App() {
                     <Route exact path = "/dashboard" component = {Dashboard1A} />
                     <Route exact path = "/personal-profile" component = {PersonalProfile} />
                     <Route exact path = "/business-profile" component = {BusinessProfile} />
+                    <Route exact path = "/add-members" component = {Members} />
+                    <Route exact path = "/member-information" component = {MemberInfo} />
     
                 </div>
 

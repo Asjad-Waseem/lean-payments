@@ -1,0 +1,84 @@
+.members__listing {
+   
+    line-height: 30px;
+    background-color: #ffffff;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 0.25rem;
+    
+}
+    
+.members__listing__header {
+
+    font-family: Poppins;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 0.01em;
+    color: #334D6E;
+    opacity: 0.5;
+    
+}
+
+.members__listing__record {
+
+    font-family: Poppins;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 0.01em;
+    color: #323C47;
+
+}
+
+.add__member {
+
+    color: #3E8CE2;;
+    font-size: 16px;
+    font-family: Rubik;
+    font-weight: 500;
+    
+}
+
+.add__member__icon {
+
+    height: 25px;
+    width: 25px;
+    fill: #3E8CE2;
+    margin-top: -5px;
+
+}
+
+.member__details {
+
+    font-size: 14px;
+    font-family: Rubik;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    color: #707683;
+
+}
+
+.name__column {
+
+    text-align: left;
+
+}
+
+.approver__col {
+
+    text-align: right;
+
+}
+
+.white__space {
+    
+    white-space: nowrap;
+    
+}
+
+
+
+
+    
+
+
+
+    

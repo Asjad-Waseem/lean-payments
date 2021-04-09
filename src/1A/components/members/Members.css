@@ -1,0 +1,159 @@
+.members {
+
+    background-color: #F5F6F8;
+    height: 100vh;
+   
+}
+
+.members__page__content__1 {
+
+    width: 100%;
+    padding-left: 68px;
+    position: relative;
+    background-color: #F5F6F8;
+    top: -6px;
+    margin-right: 20px !important;
+ 
+}
+ 
+.members__page__content {
+
+   width: 100%;
+   padding-left: 68px;
+   position: relative;
+   background-color:#F5F6F8;
+   top: 30px;
+
+}
+
+.members__page__content__open {
+
+   width: 100%;
+   position: relative;
+   padding-left: 256px;
+   background-color:#F5F6F8;
+   top: 30px;
+
+}
+
+.members__layout__container {
+
+   background-color:#F5F6F8;
+
+}
+
+.members__container {
+
+    margin-left: 20px !important;
+    margin-right: 20px !important;
+    background-color: #F5F6F8;
+
+}
+
+.members__container__1 {
+
+    background-color: #F5F6F8;
+    margin-right: 20px !important;
+    
+}
+
+.members__heading {
+
+    font-family: Rubik;
+    font-weight: 500;
+    font-size: 24px;
+    letter-spacing: 0.02em;
+    color: #000000;
+
+}
+
+.members__heading__underline {
+
+    text-decoration: none;
+    border-bottom: 2px solid #3E8CE2;
+
+}
+
+@media only screen and (max-width: 367px) {
+
+    .members__heading__underline__padding {
+
+        padding-bottom: 0px;
+   
+    }
+
+}
+
+@media only screen and (min-width: 368px) {
+
+    .members__heading__underline__padding {
+
+        padding-bottom: 5px;
+   
+    }
+
+}
+
+.members__sub__heading {
+
+    font-family: Rubik;
+    font-weight: 300;
+    font-size: 16px;
+    color: #535355;
+
+}
+
+@media only screen and (max-width: 507px) {
+
+    .members__links__layout {
+
+        flex-direction: column;
+       
+    }
+
+}
+
+@media only screen and (min-width: 508px) {
+
+    .members__links__layout {
+
+        flex-direction: row;
+       
+    }
+
+}
+
+@media only screen and (max-width: 865px) {
+
+    .members__profile__links__layout {
+
+        flex-direction: column;
+       
+    }
+
+}
+
+@media only screen and (min-width: 865px) {
+
+    .members__profile__links__layout {
+
+        flex-direction: row;
+       
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

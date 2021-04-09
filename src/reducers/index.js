@@ -10,6 +10,10 @@ import identificationDetailsReducer from './identificationDetailsReducer';
 import basicInformationReducer from './basicInformationReducer';
 import incorporationDetailsReducer from './incorporationDetailsReducer';
 import expectedUseReducer from './expectedUseReducer';
+import addMemberReducer from './addMemberReducer';
+import memberPersonalDetailsReducer from './memberPersonalDetailsReducer';
+import memberPersonalAddressDetailsReducer from './memberPersonalAddressDetailsReducer';
+import memberIdentificationDetailsReducer from './memberIdentificationDetailsReducer';
 import { persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 
@@ -33,7 +37,11 @@ const rootReducer = combineReducers ({
     businessProfileState: businessProfileStateReducer,
     basicInformation: basicInformationReducer,
     incorporationDetails: incorporationDetailsReducer,
-    expectedUseDetails: expectedUseReducer
+    expectedUseDetails: expectedUseReducer,
+    addMember: addMemberReducer,
+    memberPersonalDetails: memberPersonalDetailsReducer,
+    memberPersonalAddressDetails: memberPersonalAddressDetailsReducer,
+    memberIdentificationDetails: memberIdentificationDetailsReducer
    
 });
 

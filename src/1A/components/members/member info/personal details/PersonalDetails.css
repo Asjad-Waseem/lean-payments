@@ -1,0 +1,88 @@
+.personal__details {
+
+    display: flex;
+    flex-direction: row;
+
+}
+
+.personal__details__heading {
+
+    font-family: Rubik;
+    font-weight: 500;
+    font-size: 24px;
+    letter-spacing: 0.01em;
+    color: #000000;
+
+}
+
+.edit__icon {
+
+    fill: #1a3969;
+  
+}
+
+.input__label {
+
+    font-family: Poppins;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 0.01em;
+    color: #6E7383;
+
+}
+
+.input-group-text {
+
+    padding: 0 !important;
+    background: none !important;
+    border: none !important;
+    border-bottom: 1px solid #D3D8DD !important;
+
+}
+
+.personal__details__form input.form-control, .text-danger {
+
+    font-size: 14px;
+    font-family: Rubik;
+    font-weight: 400;
+
+}
+
+.form-control {
+
+    border: none !important;
+    border-bottom: 1px solid #D3D8DD !important;
+    padding: 0 !important
+
+}
+
+.form-control:focus {
+
+    box-shadow: none !important;
+    border-bottom: 1px solid #80bdff !important; 
+
+}
+
+.form-control.is-invalid {
+
+    border-color: #dc3545 !important;
+
+}
+
+.save__btn {
+
+    background: linear-gradient(180deg, #1A3359 -151.43%, #1854AD 100%);
+    border-radius: 5px;
+    height: 35px;
+    margin-top: 15px;
+    width: 90px;
+    
+}
+    
+.save__btn__txt {
+    
+    font-family: Poppins;
+    font-size: 13px;
+    font-weight: 600;
+
+}
