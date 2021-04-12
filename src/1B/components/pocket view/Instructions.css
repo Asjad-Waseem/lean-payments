@@ -1,12 +1,12 @@
 .instructions__layout {
 
-    background-color: #f9f9f9;
+    background-color: #F5F6F8;
 
 }
 
 .instructions__layout__container {
 
-    background-color: #f9f9f9;
+    background-color: #F5F6F8;
 
 }
 
@@ -15,8 +15,9 @@
     width: 100%;
     padding-left: 68px;
     position: relative;
-    background-color: #f9f9f9;
-    top: -16px;
+    background-color: #F5F6F8;
+    top: -6px;
+    margin-right: 20px !important;
  
 }
  
@@ -25,8 +26,8 @@
    width: 100%;
    padding-left: 68px;
    position: relative;
-   background-color: #f9f9f9;
-   top: 20px;
+   background-color: #F5F6F8;
+   top: 30px;
 
 }
 
@@ -35,28 +36,24 @@
    width: 100%;
    position: relative;
    padding-left: 256px;
-   background-color: #f9f9f9;
-   top: 20px;
+   background-color: #F5F6F8;
+   top: 30px;
 
 }
 
 .instructions__view__container {
 
     margin-left: 20px !important;
-    background-color: #f9f9f9;
+    margin-right: 20px !important;
+    background-color: #F5F6F8;
 
 }
 
 .instructions__view__container__1 {
 
-    background-color: #f9f9f9;
+    background-color: #F5F6F8;
+    margin-right: 20px !important;
     
-}
-
-.instructions__layout__col {
-
-    margin-right: 30px;
-
 }
 
 .row__flex {
@@ -70,6 +67,63 @@
 
     margin-top: 0px;
     display: inline;
+    font-family: Rubik;
+    font-weight: 500;
+    font-size: 24px;
+    letter-spacing: 0.02em;
+    color: #000000;
+
+}
+
+.opex__text {
+
+    color: #81909d;
+    font-family: Rubik;
+    font-weight: 400;
+    font-size: 16px;
+
+}
+
+.legal__expenses {
+
+    font-family: Rubik;
+    font-size: 24px;
+    font-weight: 400;
+
+}
+
+.overview__1 {
+
+    font-family: Rubik;
+    font-size: 20px;
+    font-weight: 400;
+    color: #788896;
+
+}
+
+.transactions__amount {
+
+    font-family: Rubik;
+    font-size: 24px;
+    font-weight: 400;
+
+}
+
+.instructions__links {
+
+    font-family: Rubik;
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: 0.01em;
+
+}
+
+.instructions__heading__2 {
+
+    font-family: Rubik;
+    font-weight: 400;
+    font-size: 22px !important;
+    letter-spacing: 0.01em;
 
 }
 
@@ -134,9 +188,9 @@
 
 }
 
-@media only screen and (max-width: 371px) {
+@media only screen and (max-width: 449px) {
 
-    .nav__link {
+    .instructions__nav__link {
 
        display: flex;
        flex-direction: column;
@@ -145,9 +199,9 @@
 
 }
 
-@media only screen and (min-width: 372px) {
+@media only screen and (min-width: 450px) {
 
-    .nav__link {
+    .instructions__nav__link {
     
         display: flex;
         flex-direction: row;
@@ -156,7 +210,13 @@
     
 }
 
-.active__nav__link {
+.active__nav__link__1 {
+
+    color: #b2bac1;
+
+}
+
+.active__nav__link__2 {
 
     color: black;
 
@@ -187,7 +247,7 @@
 
 @media only screen and (max-width: 619px) {
 
-    .instructions__heading {
+    .instructions__heading__1 {
 
         display: flex;
         flex-direction: column;
@@ -214,7 +274,7 @@
 
 @media only screen and (min-width: 620px) {
 
-    .instructions__heading {
+    .instructions__heading__1 {
 
         display: flex;
         flex-direction: row;
@@ -239,9 +299,9 @@
 
 }
 
-.tool__tip {
+.tool__tip__1 {
 
-    margin-top: 13px;
+    margin-top: 10px !important;
     height: 15px;
     width: 15px;
 
@@ -262,16 +322,12 @@
 
 .instructions__table__container {
 
-    overflow-x: auto;
-    min-width: 600px;
     width: 100%;
 
 }
 
 .instructions__table__headings {
 
-    min-width: 800px; 
-    overflow-x: auto;
     display: flex;
     flex-direction: row;
 
@@ -283,11 +339,49 @@
 
 }
 
+.instructions__overview__header {
+
+    font-family: Poppins;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 0.01em;
+    color: #334D6E;
+    opacity: 0.5;
+    white-space: nowrap;
+
+}
+
+
+.instructions__overview__record {
+
+    font-family: Poppins;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 0.01em;
+    color: #323C47;
+    white-space: nowrap;
+
+}
+
+.date__col .form-control{
+
+    border: 1px solid #ced4da !important;
+    padding: .375rem 1.75rem .375rem .75rem !important;
+
+}
+
+.date__col .form-control.is-invalid{
+
+    border: 1px solid #dc3545 !important;
+
+}
+
 .instructions__table__row__inner {
 
     background-color: #ffffff;
     border: 1px solid rgba(0,0,0,.125);
     border-radius: 0.25rem;
+    overflow-x: auto;
 
 }
 
@@ -302,12 +396,14 @@
     height: 20px;
     width: 20px;
     color: black;
+    margin-top: -2.5px;
 
 }
 
 .amount__icon {
 
     color: black;
+    margin-top: -2.5px;
 
 }
 

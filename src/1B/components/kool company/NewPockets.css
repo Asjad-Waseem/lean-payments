@@ -1,6 +1,6 @@
 .new__pockets {
 
-    background-color: #f9f9f9;
+    background-color: #F5F6F8;
    
 }
 
@@ -9,8 +9,9 @@
     width: 100%;
     padding-left: 68px;
     position: relative;
-    background-color: #f9f9f9;
-    top: -16px;
+    background-color: #F5F6F8;
+    top: -6px;
+    margin-right: 20px !important;
  
 }
  
@@ -19,8 +20,8 @@
    width: 100%;
    padding-left: 68px;
    position: relative;
-   background-color: #f9f9f9;
-   top: 20px;
+   background-color: #F5F6F8;
+   top: 30px;
 
 }
 
@@ -29,26 +30,44 @@
    width: 100%;
    position: relative;
    padding-left: 256px;
-   background-color: #f9f9f9;
-   top: 20px;
+   background-color: #F5F6F8;
+   top: 30px;
 
 }
 
 .new__pockets__layout__container {
 
-   background-color: #f9f9f9;
+    background-color: #F5F6F8;
+    margin-right: 20px !important;
 
 }
 
 .new__pockets__container {
 
     margin-left: 20px !important;
+    margin-right: 20px !important;
+
+}
+
+.new__pockets__container__1 {
+
+    margin-right: 20px !important;
 
 }
 
 .new__pockets__column {
 
     margin-right: 20px;
+
+}
+
+.new__pockets__heading {
+
+    font-family: Rubik;
+    font-weight: 500;
+    font-size: 24px;
+    letter-spacing: 0.02em;
+    color: #000000;
 
 }
 
@@ -73,7 +92,26 @@
 .pockets__text {
 
     color: #81909d;
-    font-size: 13px;
+    font-family: Rubik;
+    font-weight: 400;
+    font-size: 16px;
+
+}
+
+.pockets__overview {
+
+    font-family: Poppins;
+    font-size: 14px;
+    color: #788896;
+    font-weight: 500;
+
+}
+
+.create__pocket {
+
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 500;
 
 }
 
@@ -107,11 +145,19 @@
 
 }
 
-.divider__styling {
+.divider__styling__1 {
 
     margin-left: -35px;
     margin-right: -35px; 
     margin-top: 5px;
+
+}
+
+.divider__styling__2 {
+
+    margin-left: -35px;
+    margin-right: -35px; 
+    margin-top: -2.5px;
 
 }
 
@@ -205,11 +251,18 @@
 
 }
 
+.pocket__overview__row {
+
+    overflow-x: auto;
+
+}
+
 .pocket__overview__card {
 
     background-color: #ffffff;
     border: 2px solid #c3cfd9; 
     border-radius: 0px 0px 0px 0px;
+    min-width: 350px !important;
 
 }
 

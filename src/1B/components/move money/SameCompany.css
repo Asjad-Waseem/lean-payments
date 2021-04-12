@@ -1,6 +1,7 @@
 .same__company {
 
     background-color: #ffffff;
+    margin-right: 20px;
    
 }
 
@@ -10,8 +11,8 @@
     padding-left: 68px;
     position: relative;
     background-color: #ffffff;
-    top: -16px;
- 
+    top: -6px;
+    margin-right: 20px !important; 
 }
  
 .same__company__page__content {
@@ -20,7 +21,7 @@
    padding-left: 68px;
    position: relative;
    background-color: #ffffff;
-   top: 20px;
+   top: 30px;
 
 }
 
@@ -30,7 +31,7 @@
    position: relative;
    padding-left: 256px;
    background-color: #ffffff;
-   top: 20px;
+   top: 30px;
 
 }
 
@@ -43,6 +44,16 @@
  .same__company__container__col {
 
     margin-right: 20px;
+
+ }
+
+ .move__money__heading {
+
+    font-family: Rubik;
+    font-weight: 500;
+    font-size: 24px;
+    letter-spacing: 0.02em;
+    color: #000000;
 
  }
 
@@ -68,7 +79,9 @@
 .sub__heading {
 
     color: #81909d;
-    font-size: 13px;
+    font-family: Rubik;
+    font-weight: 400;
+    font-size: 16px;
 
 }
 

@@ -1,6 +1,10 @@
 import { combineReducers } from 'redux';
+
+// Generic Imports
 import collapsedReducer from './collapsedReducer';
 import siderLinkColorsReducer from './siderLinkColors';
+
+// 1A Imports
 import dashboardReducer from './dashboardReducer';
 import personalProfileStateReducer from './personalProfileStateReducer';
 import businessProfileStateReducer from './businessProfileStateReducer';
@@ -14,6 +18,11 @@ import addMemberReducer from './addMemberReducer';
 import memberPersonalDetailsReducer from './memberPersonalDetailsReducer';
 import memberPersonalAddressDetailsReducer from './memberPersonalAddressDetailsReducer';
 import memberIdentificationDetailsReducer from './memberIdentificationDetailsReducer';
+import instructionsReducer from './instructionsReducer';
+
+// 1B Imports
+import moveMoneyReducer from './moveMoneyReducer';
+
 import { persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 
@@ -21,7 +30,7 @@ const persistConfig = {
 
     key: 'root',
     storage,
-    whitelist: ['siderLinks', 'personalProfileState', 'businessProfileState', 'dashboard']
+    whitelist: ['siderLinks', 'personalProfileState', 'businessProfileState', 'dashboard', 'instructions']
 
 }
 
@@ -41,7 +50,9 @@ const rootReducer = combineReducers ({
     addMember: addMemberReducer,
     memberPersonalDetails: memberPersonalDetailsReducer,
     memberPersonalAddressDetails: memberPersonalAddressDetailsReducer,
-    memberIdentificationDetails: memberIdentificationDetailsReducer
+    memberIdentificationDetails: memberIdentificationDetailsReducer,
+    moveMoney: moveMoneyReducer,
+    instructions: instructionsReducer
    
 });
 

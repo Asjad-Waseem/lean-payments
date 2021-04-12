@@ -1,6 +1,6 @@
 .executive__view {
 
-    background-color: #f9f9f9;
+    background-color: #F5F6F8;
 
 }
 
@@ -9,8 +9,9 @@
     width: 100%;
     padding-left: 68px;
     position: relative;
-    background-color: #f9f9f9;
-    top: -16px;
+    background-color: #F5F6F8;
+    top: -6px;
+    margin-right: 20px !important;
  
 }
  
@@ -19,8 +20,8 @@
    width: 100%;
    padding-left: 68px;
    position: relative;
-   background-color: #f9f9f9;
-   top: 20px;
+   background-color: #F5F6F8;
+   top: 30px;
 
 }
 
@@ -29,14 +30,14 @@
    width: 100%;
    position: relative;
    padding-left: 256px;
-   background-color: #f9f9f9;
-   top: 20px;
+   background-color: #F5F6F8;
+   top: 30px;
 
 }
 
 .executive__layout__container {
 
-   background-color: #f9f9f9;
+    background-color: #F5F6F8;
 
 }
 
@@ -44,22 +45,32 @@
 
     margin-left: 20px !important;
     margin-right: 20px !important;
-    background-color: #f9f9f9;
+    background-color: #F5F6F8;
 
 }
 
 .executive__view__container__1 {
 
-    background-color: #f9f9f9;
+    background-color: #F5F6F8;
     margin-right: 20px !important;
     
 }
 
-.bold__font {
+.executive__view__dashboard {
+
+    font-family: Rubik;
+    font-weight: 500;
+    font-size: 24px;
+    letter-spacing: 0.02em;
+    color: #000000;
+
+}
+
+/* .bold__font {
 
     font-weight: bold;
 
-}
+} */
 
 .space__between__flex {
 
@@ -90,9 +101,36 @@
 
 }
 
+.executive__view__kool__company {
+
+    font-family: Rubik;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 30px;
+    letter-spacing: 0.15px;
+
+}
+
+.executive__view__overview {
+
+    font-family: Rubik;
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: 0.01em;
+    color: #788896;
+        
+}
+
+.graph__links {
+
+    font-family: Rubik;
+
+}
+
 .graph__height {
 
     height: 200px;
+    font-size: 20px;
 
 }
 
@@ -107,12 +145,13 @@
 
     height: 15px;
     width: 15px;
-    margin-top: 8px;
+    margin-top: 8px !important;
 
 }
 
 .standings__remarks {
 
+    font-family: Poppins;
     color: #30b6a8;
 
 }
@@ -139,6 +178,24 @@
 
 }
 
+.pocket__heading {
+
+    font-family: Poppins;
+    font-size: 14px;
+    color: #788896;
+    font-weight: 500;
+    margin-bottom: -5px;
+
+}
+
+.pocket__sub__heading {
+
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 500;
+
+}
+
 .kool__company__overview {
 
     height: 325px;
@@ -146,6 +203,45 @@
     border: 1px solid rgba(0,0,0,.125);
     border-radius: 0.25rem;
     overflow-x: auto;
+
+}
+
+.financial__standing {
+
+    font-family: Rubik;
+    line-height: 30px !important;
+
+}
+
+.executive__view__businesses {
+
+    font-family: Poppins;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+
+}
+
+.businesses__statement {
+
+    font-family: Poppins;
+    font-weight: 500;
+    font-size: 15px !important;
+
+}
+
+.executive__business__name {
+
+    font-family: Poppins;
+    font-size: 14px !important;
+    font-weight: 500;
+
+}
+
+.executive__business__info {
+
+    font-family: Poppins;
+    font-size: 13px !important;
+    font-weight: 500;
 
 }
 
@@ -196,6 +292,15 @@
     margin-left: -35px;
     margin-right: -35px; 
     margin-top: 5px;
+
+}
+
+.inflow__outflow {
+
+    font-family: Poppins;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 0.01em;
 
 }
 
@@ -258,16 +363,16 @@
 
 .date__created {
 
-    font-size: 12px;
-    font-weight: 500;
     color: #7b8b98;
 
 }
 
 .approved {
 
+    font-family: Poppins;
     font-size: 13px;
-    font-weight: 500; float: right;
+    font-weight: 500; 
+    float: right;
     color: #21b0a2;
 
 }
@@ -362,3 +467,9 @@
 
 }
 
+.business__account {
+
+    font-family: Poppins;
+    font-weight: 500;
+
+}

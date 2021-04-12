@@ -54,11 +54,11 @@ function NewPockets() {
 
                 <Row className = {width >= 768 ? "new__pockets__container" : "new__pockets__container__1"}>
 
-                    <Col md = "10" className = "new__pockets__column">
+                    <Col md = "12" className = "new__pockets__column">
 
                         <Row>
 
-                            <h4 className = "bold__font">Pockets - What are they?</h4>
+                            <h4 className = "new__pockets__heading">Pockets - What are they?</h4>
                             <p className = "pockets__text mt-1" >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 
                             <br/>
@@ -67,16 +67,16 @@ function NewPockets() {
 
                         <Row className = "mt-2">
                     
-                            <p className = "gray__font font__13 font__500">Pocket's Overview</p>
+                            <p className = "pockets__overview">Pocket's Overview</p>
 
                         </Row>
 
-                        <Row>
+                        <Row className = "pocket__overview__row">
 
                             <Card as = {Col} md = "12" className = "pocket__overview__card">
                                 <Card.Body>
 
-                                    <div className = "space__between__flex gray__font font__13 font__bold">
+                                    <div className = "pockets__overview space__between__flex">
 
                                         <p>Pocket Name</p>
 
@@ -94,7 +94,7 @@ function NewPockets() {
 
                                             <u className = "link__style">
 
-                                            <Link to = "/kool-company/newly-created-pockets" className = "font__13 font__500 ml-1" onClick={() => setModalShow(true)}>Create Pocket</Link>
+                                            <Link to = "/kool-company/newly-created-pockets" className = "create__pocket mt-1 ml-1" onClick={() => setModalShow(true)}>Create Pocket</Link>
 
                                             <>
                                                
@@ -140,25 +140,25 @@ function NewPockets() {
 
                                     </div>
 
-                                    <hr className = "divider__styling"/>
+                                    <hr className = "divider__styling__1"/>
 
-                                    <div className = "space__between__flex">
+                                    <div className = "pockets__table__info space__between__flex">
 
                                     <div className = "row__flex white__space">
 
                                         <CgChevronRightO className = "sub__pockets__icon"/>
 
-                                        <Link to = "/kool-company/newly-created-pockets" className = "text__dark font__13 font__500 ml-1 mb-3">Bank Service Charges</Link>
+                                        <p className = "pockets__overview text__dark ml-1">Bank Service Charges</p>
 
-                                        <RiSettings5Fill className = "settings__icon ml-2"/>
-
-                                    </div>
-
-                                        <p className = "gray__font font__13 font__500">10%</p>
+                                        <Link to = "/kool-company/newly-created-pockets"><RiSettings5Fill className = "settings__icon ml-2 mb-2"/></Link>
 
                                     </div>
 
-                                    <hr className = "divider__styling"/>
+                                        <p className = "pockets__overview">10%</p>
+
+                                    </div>
+
+                                    <hr className = "divider__styling__2"/>
 
                                     <div className = "space__between__flex">
 
@@ -166,17 +166,17 @@ function NewPockets() {
 
                                         <CgChevronRightO className = "sub__pockets__icon"/>
 
-                                        <Link to = "/kool-company/newly-created-pockets" className = "text__dark font__13 font__500 ml-1 mb-3">Legal Expenses</Link>
+                                        <p className = "pockets__overview text__dark ml-1 mb-3">Legal Expenses</p>
 
-                                        <RiSettings5Fill className = "settings__icon ml-2"/>
+                                        <Link to = "/kool-company/newly-created-pockets"><RiSettings5Fill className = "settings__icon ml-2 mb-2"/></Link>
 
                                     </div>
 
-                                        <p className = "gray__font font__13 font__500">10%</p>
+                                        <p className = "pockets__overview">10%</p>
                                        
                                     </div>
 
-                                        <hr className = "divider__styling"/>
+                                        <hr className = "divider__styling__2"/>
 
                                     <div className = "space__between__flex">
 
@@ -184,17 +184,17 @@ function NewPockets() {
 
                                         <CgChevronRightO className = "sub__pockets__icon" />
 
-                                        <Link to = "/kool-company/newly-created-pockets" className = "text__dark font__13 font__500 ml-1 mb-3">Supplier 1</Link>
+                                        <p className = "pockets__overview text__dark ml-1 mb-3">Supplier 1</p>
 
-                                        <RiSettings5Fill className = "settings__icon ml-2"/>
+                                        <Link to = "/kool-company/newly-created-pockets"><RiSettings5Fill className = "settings__icon ml-2 mb-2"/></Link>
 
                                     </div>
 
-                                        <p className = "gray__font font__13 font__500">15%</p>
+                                        <p className = "pockets__overview">15%</p>
                                        
                                     </div>
 
-                                        <hr className = "divider__styling"/>
+                                        <hr className = "divider__styling__2"/>
 
                                     <div className = "last__subpocket__row">
 
@@ -202,13 +202,13 @@ function NewPockets() {
 
                                         <CgChevronRightO className = "sub__pockets__icon"/>
 
-                                        <Link to = "/kool-company/newly-created-pockets" className = "text__dark font__13 font__500 ml-1 mb-3">[New Pocket]</Link>
+                                        <p className = "pockets__overview text__dark ml-1 mb-3">[New Pocket]</p>
 
-                                        <RiSettings5Fill className = "settings__icon ml-2"/>
+                                        <Link to = "/kool-company/newly-created-pockets"><RiSettings5Fill className = "settings__icon ml-2 mb-2"/></Link>
 
                                     </div>
  
-                                        <p className = "gray__font font__13 font__500">15%</p>
+                                        <p className = "pockets__overview">15%</p>
                                       
                                     </div>
 

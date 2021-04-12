@@ -26,6 +26,8 @@ function getWindowDimensions() {
 
 function ExecutiveView() {
 
+    // Redux for graph was out of scope for this milestone, so I used random static data to show the working
+
     const collapsed = useSelector(state => state.collapsed.collapsed);
 
     const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
@@ -95,7 +97,7 @@ function ExecutiveView() {
                 borderColor: "#62a1e7",
                 pointBorderColor: "#62a1e7",
                 pointBackgroundColor: "#62a1e7",
-                pointRadius: "4"
+                pointRadius: "4",
 
             },
 
@@ -181,7 +183,7 @@ function ExecutiveView() {
 
                                    <Row>
 
-                                   <h4 className = "bold__font">Dashboard</h4>
+                                   <h4 className = "executive__view__dashboard">Dashboard</h4>
 
                                    <br/>
 
@@ -194,8 +196,8 @@ function ExecutiveView() {
                                    <Card as = {Col} md = "12" > 
                                        <Card.Body className = "space__between__flex">
                                            <div className = "column__flex mt-2">
-                                               <Card.Title>Hi Nadir!</Card.Title>
-                                               <Card.Subtitle className="mb-2 text-muted">Welcome to your personal dashboard</Card.Subtitle>
+                                               <Card.Title className = "greeting__name">Hi Nadir!</Card.Title>
+                                               <Card.Subtitle className="greeting__statement mb-2">Welcome to your personal dashboard</Card.Subtitle>
                                            </div>
                                            <FaUserTie className = "user__avatar__icon"/>
                                        </Card.Body>
@@ -213,28 +215,28 @@ function ExecutiveView() {
 
                                             <Col className = "space__between__flex">
                                                 <div className = {width > 600 ? "column__flex mt-4 ml-5" : "column__flex mt-4"}>
-                                                    <h5 className = "font__400">Kool Company</h5>
-                                                    <h6 className = "font__400 gray__font">Overview</h6>
+                                                    <h5 className = "executive__view__kool__company">Kool Company</h5>
+                                                    <h6 className = "executive__view__overview">Overview</h6>
                                                 </div>
                                                 <div className = {width >= 600 ? "row__flex font__400 mt-4 mr-5" : "row__flex font__400 mt-4"}>
                                                     <Link to = "/dashboard/executive-view" onClick = {onSet3MonthsDuration}>
 
-                                                    <p className = "gray__font ml-2">3M</p>
+                                                    <p className = "graph__links ml-2">3M</p>
                                                         
                                                     </Link>
                                                     <Link to = "/dashboard/executive-view" className = "ml-3" onClick = {onSet6MonthsDuration}>
 
-                                                    <p className = "gray__font ml-2">6M</p>
+                                                    <p className = "graph__Links ml-2">6M</p>
                                                         
                                                     </Link>
                                                     <Link to = "/dashboard/executive-view" className = "ml-3" onClick = {onSet1YearDuration}>
 
-                                                    <p className = "gray__font ml-2">1Y</p>
+                                                    <p className = "graph__links ml-2">1Y</p>
     
                                                     </Link>
                                                     <Link to = "/dashboard/executive-view" className = "ml-3" onClick = {onSet2YearDuration}>
 
-                                                    <p className = "gray__font ml-2">2Y</p>
+                                                    <p className = "graph__links ml-2">2Y</p>
     
                                                     </Link>
                                                 </div>
@@ -245,7 +247,7 @@ function ExecutiveView() {
 
                                         <Row className = "graph__height">
 
-                                            <Line data = {data} height = {50} width = {100}
+                                            <Line data = {data} height = {50} width = {100} 
                                              options = 
                                                        {{ maintainAspectRatio: false, responsive: true, 
                                                           elements: {
@@ -294,7 +296,7 @@ function ExecutiveView() {
                                         <Card.Body className = "space__between__flex">
                                             <div className = "column__flex mt-2">
                                                 <div className = "row__flex">
-                                                    <Card.Title>Financial Standing</Card.Title>
+                                                    <Card.Title className = "financial__standing">Financial Standing</Card.Title>
                                                   
                                                     <OverlayTrigger
                                                     className = "overlay"
@@ -336,9 +338,9 @@ function ExecutiveView() {
                                                 :
                                                 <IoIosArrowDown className = "arrow__icons"/>
                                                 } 
-                                                <Card.Subtitle className = "inflow ml-2" style = {{marginTop: "-3px"}}>Inflow</Card.Subtitle>
+                                                <Card.Subtitle className = "inflow__outflow ml-2" style = {{marginTop: "-2px"}}>Inflow</Card.Subtitle>
                                             </Link>
-                                            <Card.Subtitle className = "ml-2 text-muted" style = {{marginTop: "-3px"}}>$100</Card.Subtitle>                                          
+                                            <Card.Subtitle className = "ml-2 text-muted" style = {{marginTop: "-2px"}}>$100</Card.Subtitle>                                          
                                         </Card.Body>
                                     </Card>
 
@@ -355,11 +357,11 @@ function ExecutiveView() {
                                   <Card as = {Col} md = "12" className = "pocket__overview__card">
                                       <Card.Body>
 
-                                          <div className = "space__between__flex">
+                                          <div className = "pocket__heading space__between__flex">
 
-                                              <p className = "font__13 font__500 pockets__gray__font">Pocket Name</p>
+                                              <p>Pocket Name</p>
 
-                                              <p className = "font__13 font__500 pockets__gray__font">Balance</p>
+                                              <p>Balance</p>
 
                                           </div>
 
@@ -371,11 +373,11 @@ function ExecutiveView() {
 
                                                   <CgChevronRightO className = "sub__pockets__icon" />
 
-                                                  <Link to = "/kool-company/newly-created-pockets" className = "text__dark font__13 font__500 ml-1 mb-3">Bank Service Charges</Link>
+                                                  <Link to = "/kool-company/newly-created-pockets" className = "pocket__sub__heading text__dark ml-1 mb-3">Bank Service Charges</Link>
 
                                               </div>
 
-                                              <p className = "gray__font font__13 font__500">$30</p>
+                                              <p className = "pocket__sub__heading gray__font">$30</p>
 
                                           </div>
 
@@ -387,11 +389,11 @@ function ExecutiveView() {
 
                                                   <CgChevronRightO className = "sub__pockets__icon" />
 
-                                                  <Link to = "/kool-company/newly-created-pockets" className = "text__dark font__13 font__500 ml-1 mb-3">Legal Expenses</Link>
+                                                  <Link to = "/kool-company/newly-created-pockets" className = "pocket__sub__heading text__dark ml-1 mb-3">Legal Expenses</Link>
 
                                               </div>
 
-                                              <p className = "gray__font font__13 font__500">$50</p>
+                                              <p className = "pocket__sub__heading gray__font">$50</p>
                                        
                                           </div>
 
@@ -403,11 +405,11 @@ function ExecutiveView() {
 
                                               <CgChevronRightO className = "sub__pockets__icon" />
 
-                                              <Link to = "/kool-company/newly-created-pockets" className = "text__dark font__13 font__500 ml-1 mb-3">Supplier 1</Link>
+                                              <Link to = "/kool-company/newly-created-pockets" className = "pocket__sub__heading text__dark ml-1 mb-3">Supplier 1</Link>
 
                                           </div>
 
-                                          <p className = "gray__font font__13 font__500">$20</p>
+                                          <p className = "pocket__sub__heading gray__font">$20</p>
                                        
                                           </div>
 
@@ -434,9 +436,9 @@ function ExecutiveView() {
                                                 :
                                                 <IoIosArrowDown className = "arrow__icons"/>
                                                 } 
-                                                <Card.Subtitle className = "ml-2" style = {{marginTop: "-3px"}}>Outflow</Card.Subtitle>
+                                                <Card.Subtitle className = "inflow__outflow ml-2" style = {{marginTop: "-2px"}}>Outflow</Card.Subtitle>
                                             </Link>
-                                            <Card.Subtitle className = "ml-2 text-muted" style = {{marginTop: "-3px"}}>$30</Card.Subtitle>                                          
+                                            <Card.Subtitle className = "ml-2 text-muted" style = {{marginTop: "-2px"}}>$30</Card.Subtitle>                                          
                                         </Card.Body>
                                     </Card>
 
@@ -453,27 +455,11 @@ function ExecutiveView() {
                                         <Card as = {Col} md = "12" className = "pocket__overview__card">
                                             <Card.Body>
 
-                                                <div className = "space__between__flex">
+                                                <div className = "pocket__heading space__between__flex">
 
-                                                    <p className = "gray__font font__13 font__500">Pocket Name</p>
+                                                    <p>Pocket Name</p>
 
-                                                    <p className = "gray__font font__13 font__500">Balance</p>
-
-                                                </div>
-
-                                                <hr className = "divider__styling"/>
-
-                                                <div className = "space__between__flex">
-
-                                                    <div className = "row__flex">
-
-                                                        <CgChevronRightO className = "sub__pockets__icon"/>
-
-                                                        <Link to = "/kool-company/newly-created-pockets" className = "text__dark font__13 font__500 ml-1 mb-3">Bank Service Charges</Link>
-
-                                                    </div>
-
-                                                    <p className = "gray__font font__13 font__500">$10</p>
+                                                    <p>Balance</p>
 
                                                 </div>
 
@@ -485,11 +471,27 @@ function ExecutiveView() {
 
                                                         <CgChevronRightO className = "sub__pockets__icon"/>
 
-                                                        <Link to = "/kool-company/newly-created-pockets" className = "text__dark font__13 font__500 ml-1 mb-3">Legal Expenses</Link>
+                                                        <Link to = "/kool-company/newly-created-pockets" className = "pocket__sub__heading text__dark ml-1 mb-3">Bank Service Charges</Link>
 
                                                     </div>
 
-                                                    <p className = "gray__font font__13 font__500">$10</p>
+                                                    <p className = "pocket__sub__heading gray__font">$10</p>
+
+                                                </div>
+
+                                                <hr className = "divider__styling"/>
+
+                                                <div className = "space__between__flex">
+
+                                                    <div className = "row__flex">
+
+                                                        <CgChevronRightO className = "sub__pockets__icon"/>
+
+                                                        <Link to = "/kool-company/newly-created-pockets" className = "pocket__sub__heading text__dark ml-1 mb-3">Legal Expenses</Link>
+
+                                                    </div>
+
+                                                    <p className = "pocket__sub__heading gray__font">$10</p>
        
                                                 </div>
 
@@ -501,11 +503,11 @@ function ExecutiveView() {
 
                                                         <CgChevronRightO className = "sub__pockets__icon"/>
 
-                                                         <Link to = "/kool-company/newly-created-pockets" className = "text__dark font__13 font__500 ml-1 mb-3">Supplier 1</Link>
+                                                         <Link to = "/kool-company/newly-created-pockets" className = "pocket__sub__heading text__dark ml-1 mb-3">Supplier 1</Link>
 
                                                     </div>
 
-                                                    <p className = "gray__font font__13 font__500">$10</p>
+                                                    <p className = "pocket__sub__heading gray__font">$10</p>
        
                                                 </div>
 
@@ -526,21 +528,21 @@ function ExecutiveView() {
 
                                     <Card as = {Col} md = "12" className = "businesses__card"> 
                                         <Card.Body className = "mt-3 mb-3" >
-                                            <Card.Subtitle>Businesses</Card.Subtitle>
-                                            <Card.Subtitle className = "mt-1 text-muted">These are the list of businesses you have created thus far.</Card.Subtitle>
+                                            <Card.Subtitle className = "executive__view__businesses">Businesses</Card.Subtitle>
+                                            <Card.Subtitle className = "businesses__statement mt-1 text-muted">These are the list of businesses you have created thus far.</Card.Subtitle>
                                                 <br/>
                                                 <Row className = "businesses__card__row">
                                                 <Card as = {Col} sm style = {{borderRadius: "0px 0px 0px 0px", border: "2px solid #c3cfd9"}}>
                                                     <Card.Body>
                                                         <div className = "edit">
-                                                            <p className = "font__13 font__500">Kool Company</p>
+                                                            <p className = "executive__business__name">Kool Company</p>
                                                             <Link to = "/dashboard/executive-view">
-                                                                <p className = "font__12 font__500 blue__font">Edit</p>
+                                                                <p className = "executive__business__info blue__font">Edit</p>
                                                             </Link>
                                                         </div>
-                                                        <div className = "date">
+                                                        <div className = "executive__business__info date">
                                                             <p className = "date__created">Date Created:</p>
-                                                            <p className = "text__dark font__12 font__500 ml-2">December 23, 2018</p>
+                                                            <p className = " text__dark ml-2">December 23, 2018</p>
                                                         </div>
 
                                                         <Link to = "/dashboard/executive-view">
@@ -551,7 +553,7 @@ function ExecutiveView() {
                                                 <Card as = {Col} className = {width >= 576 ? "ml-4" : "mt-3"} style = {{borderRadius: "0px 0px 0px 0px", border: "2px solid #c3cfd9"}}>
                                                     <Card.Body>
                                                         <div className = "create__business__account">
-                                                            <Card.Subtitle>Create Business Account</Card.Subtitle>
+                                                            <Card.Subtitle className = "business__account">Create Business Account</Card.Subtitle>
                                                             <Link to = "/dashboard/executive-view">
                                                                 <GrAdd className = "add__icon"/>
                                                             </Link>

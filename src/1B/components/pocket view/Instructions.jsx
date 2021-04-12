@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { NavLink, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import { useForm } from "react-hook-form";
 import { Container, Row, Col, OverlayTrigger, Tooltip, Button, Form, Table } from 'react-bootstrap';
 
 import Sider from '../../../layout/Sider';
@@ -8,12 +9,15 @@ import Opex from '../../assets/businesses.png';
 import tooltip from '../../assets/tooltip.svg';
 import Transfer from '../../assets/transfer.svg';
 
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 
 import { GoCalendar } from 'react-icons/go';
 import { HiCurrencyDollar } from 'react-icons/hi';
 import { BsArrowUpRight } from 'react-icons/bs';
 import { IoIosArrowDown, IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
+
+import { selectInstructionsOverview, selectTransactionsOverview } from '../../../actions/instructionsActions';
+import { submitMovingMoneyDetails } from '../../../actions/moveMoneyActions';
 
 import './Instructions.css';
 
@@ -28,6 +32,9 @@ function Instructions() {
 
     const collapsed = useSelector(state => state.collapsed.collapsed);
 
+    const transactionsOverview = useSelector(state => state.instructions.transactions_overview);
+    const instructionsOverview = useSelector(state => state.instructions.instructions_overview);
+
     const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
 
     useEffect(() => {
@@ -40,6 +47,31 @@ function Instructions() {
     }, []);
   
     const width = windowDimensions.width;
+
+    const { register, errors, handleSubmit, reset } = useForm();
+
+    const dispatch = useDispatch();
+
+    const onSelectTransactions = () => dispatch(selectTransactionsOverview());
+    const onSelectInstructions = () => dispatch(selectInstructionsOverview());
+
+    const onSubmit = (moveMoneyDetails) => {
+
+          const finalData = {
+
+              from: moveMoneyDetails.from,
+              to: moveMoneyDetails.to,
+              date: moveMoneyDetails.date,
+              status: moveMoneyDetails.status,
+              type: moveMoneyDetails.type
+            
+          }
+
+    dispatch(submitMovingMoneyDetails(finalData));
+
+    reset();
+
+  }
 
   return (
 
@@ -71,13 +103,13 @@ function Instructions() {
 
                             <Row>
 
-                                <p className = "gray__font font__13 mt-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <p className = "opex__text mt-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 
                             </Row>
 
                             <br/>
 
-                            <Row className = "legal__expenses__row mr-2">
+                            <Row className = "legal__expenses__row">
 
                                 <Col>
 
@@ -85,10 +117,10 @@ function Instructions() {
 
                                         <Col className = "space__between__flex">
                                             <div className = {width > 600 ? "column__flex mt-4 ml-5" : "column__flex mt-4"}>
-                                                <h3 className = "font__400">Legal Expenses</h3>
-                                                <h4 className = "font__400 gray__font">Overview</h4>
+                                                <h3 className = "legal__expenses">Legal Expenses</h3>
+                                                <h4 className = "overview__1">Overview</h4>
                                             </div>
-                                            <h2 className = {width >= 600 ? "font__400 mt-4 mr-5" : "font__400 mt-4"}>$200.00 CAD</h2>
+                                            <h2 className = {width >= 600 ? "transactions__amount mt-4 mr-5" : "transactions__amount mt-4"}>$200.00 CAD</h2>
 
                                         </Col>
 
@@ -106,26 +138,26 @@ function Instructions() {
 
                             <br/>
                             
-                            <Row className = "nav__link mt-3">
+                            <Row className = "instructions__nav__link mt-3">
 
                                 <u>
-                                <NavLink to = "/pocket-view/instructions" activeClassName = "active__nav__link" style = {{fontSize: "13px", whiteSpace: "nowrap", color: "#b2bac1"}}>Transactions Overview</NavLink>
+                                <Link className = "instructions__links" to = "/pocket-view/instructions" onClick = {onSelectTransactions} style = {{color: transactionsOverview}}>Transactions Overview</Link>
                                 </u>
 
                                 <u> 
-                                <NavLink to = "/pocket-view/instructions" className =  {width >= 372 ? "ml-4" : "nav__link__1"}  activeClassName = "active__nav__link" style = {{display: "inline", fontSize: "13px", whiteSpace: "nowrap"}}>Instructions Overview</NavLink>
+                                <Link className = "instructions__link" to = "/pocket-view/instructions" className =  {width >= 450 ? "ml-4" : "nav__link__1"}  onClick = {onSelectInstructions} style = {{display: "inline", color: instructionsOverview}}>Instructions Overview</Link>
                                 </u>
 
                             </Row>
 
                             <br/>
 
-                            <Row className = "instructions__overview mr-2">
+                            <Row className = "instructions__overview">
                               
-                                <div className = "instructions__heading">
+                                <div className = "instructions__heading__1">
 
-                                    <h3 className = "instructions">Instructions</h3>
-                                    <h3 className = "overview">Overview</h3>
+                                    <p className = "instructions instructions__heading__2">Instructions</p>
+                                    <p className = "overview instructions__heading__2">Overview</p>
                            
                                         <OverlayTrigger
                                          className = "overlay"
@@ -138,13 +170,13 @@ function Instructions() {
                                          }
                                         >
 
-                                         <img className = {width >=620 ? "tool__tip ml-2" : "tool__tip"} src = {tooltip} alt = "tool-tip"/>
+                                         <img className = {width >=620 ? "tool__tip__1 ml-2" : "tool__tip__1"} src = {tooltip} alt = "tool-tip"/>
         
                                         </OverlayTrigger>
 
                                 </div>
 
-                                <Button className = "move__money" variant = "primary">  
+                                <Button className = "move__money" variant = "primary" onClick = {handleSubmit(onSubmit)}>  
                                     <img className = "move__money__icon mr-2" src = {Transfer} alt = "move-money"/>Move Money                    
                                 </Button>                       
 
@@ -152,30 +184,28 @@ function Instructions() {
 
                             <br/>
 
-                            <Row className = "instructions__table__row mr-2"> 
+                            <Row className = "instructions__table__row"> 
                               
                                 <Col>
 
-                                    <Row className = "instructions__table__container">
+                                    <Row className = "instructions__table__container"> 
 
-                                        <Form>
+                                        <Form onSubmit={handleSubmit(onSubmit)}>
 
                                             <Row className = "instructions__table__headings">
 
-                                                <Col className = "instructions__table__headings__col">
+                                                <Col lg className = "instructions__table__headings__col">
 
-                                                    <Form.Label>From</Form.Label>
+                                                    <Form.Label className = "input__label text__dark">From</Form.Label>
 
                                                     <br/> 
 
-                                                    <Form.Label className="mr-sm-2" htmlFor="inlineFormCustomSelect" srOnly>
-                                                         Preference
-                                                    </Form.Label>
                                                     <Form.Control
                                                      as="select"
-                                                     className="mr-sm-2"
-                                                     id="inlineFormCustomSelect"
-                                                     style = {{width: "130px"}}
+                                                     className = {errors.from ? "is-invalid mr-sm-2" : "mr-sm-2"} 
+                                                     name = "from"
+                                                     style = {width < 992 ? {width: "100%"} : {width: "130px"}}
+                                                     ref={register ( { required: true } ) }
                                                      custom
                                                      >
                                                      <option value="">Select</option>
@@ -184,22 +214,24 @@ function Instructions() {
                                                      <option value="Supplier #1">Supplier #1</option>
                                                     </Form.Control>
 
+                                                    <div className = "text-danger">
+                                                        {errors.from && errors.from.type === "required" && <span>This field is required</span>}
+                                                    </div>
+
                                                 </Col>
 
-                                                <Col className = "instructions__table__headings__col">
+                                                <Col lg className = "instructions__table__headings__col">
 
-                                                    <Form.Label>To</Form.Label>
+                                                    <Form.Label className = "input__label text__dark">To</Form.Label>
 
-                                                    <br/> 
+                                                    <br/>
 
-                                                    <Form.Label className="mr-sm-2" htmlFor="inlineFormCustomSelect" srOnly>
-                                                        Preference
-                                                    </Form.Label>
                                                     <Form.Control
                                                      as="select"
-                                                     className="mr-sm-2"
-                                                     id="inlineFormCustomSelect"
-                                                     style = {{width: "130px"}}
+                                                     className = {errors.to ? "is-invalid mr-sm-2" : "mr-sm-2"} 
+                                                     name = "to"
+                                                     style = {width < 992 ? {width: "100%"} : {width: "130px"}}
+                                                     ref={register ( { required: true } ) }
                                                      custom
                                                     >
                                                     <option value="">Select</option>
@@ -207,42 +239,46 @@ function Instructions() {
                                                     <option value="Supplier #1">Supplier #1</option>
                                                     <option value="3">Legal Expenses</option>
                                                     </Form.Control>
+                                                    
+                                                    <div className = "text-danger">
+                                                        {errors.to && errors.to.type === "required" && <span>This field is required</span>}
+                                                    </div>
 
                                                 </Col>
 
-                                                <Col className = "instructions__table__headings__col">
+                                                <Col lg className = "instructions__table__headings__col date__col">
 
-                                                    <Form.Label>Date</Form.Label>
+                                                    <Form.Label className = "input__label text__dark">Date</Form.Label>
 
                                                     <br/> 
 
-                                                    <Form.Label className="mr-sm-2" htmlFor="inlineFormCustomSelect" srOnly>
-                                                        Preference
-                                                    </Form.Label>
                                                     <Form.Control
                                                      type="date"
-                                                     className="mr-sm-2"
-                                                     id="inlineFormCustomSelect"
-                                                     style={{width: "130px"}}
+                                                     className = {errors.date ? "is-invalid mr-sm-2" : "mr-sm-2"} 
+                                                     name = "date"
+                                                     style = {width < 992 ? {width: "100%"} : {width: "200px"}}
+                                                     ref={register ( { required: true } ) }
                                                     >
                                                     </Form.Control>
 
+                                                    <div className = "text-danger">
+                                                        {errors.date && errors.date.type === "required" && <span>This field is required</span>}
+                                                    </div>
+
                                                 </Col>
 
-                                                <Col className = "instructions__table__headings__col">
+                                                <Col lg className = "instructions__table__headings__col">
 
-                                                    <Form.Label>Status</Form.Label>
+                                                    <Form.Label className = "input__label text__dark">Status</Form.Label>
 
                                                     <br/> 
 
-                                                    <Form.Label className="mr-sm-2" htmlFor="inlineFormCustomSelect" srOnly>
-                                                        Preference
-                                                    </Form.Label>
                                                     <Form.Control
                                                      as="select"
-                                                     className="mr-sm-2"
-                                                     id="inlineFormCustomSelect"
-                                                     style = {{width: "130px"}}
+                                                     className = {errors.status ? "is-invalid mr-sm-2" : "mr-sm-2"} 
+                                                     name = "status"
+                                                     style = {width < 992 ? {width: "100%"} : {width: "130px"}}
+                                                     ref={register ( { required: true } ) }
                                                      custom
                                                     >
                                                     <option value="">Select</option>
@@ -250,28 +286,34 @@ function Instructions() {
                                                     <option value="Scheduled">Scheduled</option>
                                                     </Form.Control>
 
+                                                    <div className = "text-danger">
+                                                        {errors.status && errors.status.type === "required" && <span>This field is required</span>}
+                                                    </div>
+
                                                 </Col>
  
-                                                <Col className = "instructions__table__headings__col">
+                                                <Col lg className = "instructions__table__headings__col">
 
-                                                    <Form.Label>Type</Form.Label>
+                                                    <Form.Label className = "input__label text__dark">Type</Form.Label>
 
                                                     <br/> 
 
-                                                    <Form.Label className="mr-sm-2" htmlFor="inlineFormCustomSelect" srOnly>
-                                                        Preference
-                                                    </Form.Label>
                                                     <Form.Control
                                                      as="select"
-                                                     className="mr-sm-2"
-                                                     id="inlineFormCustomSelect"
-                                                     style = {{width: "130px"}}
+                                                     className = {errors.type ? "is-invalid" : null} 
+                                                     name = "type"
+                                                     style = {width < 992 ? {width: "100%"} : {width: "130px"}}
+                                                     ref={register ( { required: true } ) }
                                                      custom
                                                     >
                                                     <option value="">Select</option>
                                                     <option value="Credit">Credit</option>
                                                     <option value="2">Debit</option>
                                                     </Form.Control>
+
+                                                    <div className = "text-danger">
+                                                        {errors.type && errors.type.type === "required" && <span>This field is required</span>}
+                                                    </div>
 
                                                 </Col>
 
@@ -289,7 +331,7 @@ function Instructions() {
   
                                             <Table className = "text-center" responsive="md" style = {{marginBottom: "0px"}}>
                                                 <thead className = "col">
-                                                    <tr className = "gray__font white__space">
+                                                    <tr className = "instructions__overview__header">
                                                         <th>#</th>
                                                         <th>From</th>
                                                         <th>To</th>
@@ -298,7 +340,7 @@ function Instructions() {
                                                         <th>Amount <HiCurrencyDollar className = "amount__icon ml-2"/></th>
                                                     </tr>
                                                 </thead>
-                                                <tbody className = "font__500 white__space">
+                                                <tbody className = "instructions__overview__record">
                                                     <tr>
                                                         <td>1</td>
                                                         <td>Legal Expenses</td>
