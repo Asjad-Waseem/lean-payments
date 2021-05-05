@@ -150,7 +150,7 @@ function Sider() {
 
             <br/>
 
-            <Link to = {url} style = {{color: membersColor}} onClick = {onSelectMembers}>
+            <Link to = "/member-information" style = {{color: membersColor}} onClick = {onSelectMembers}>
 
              <HiUserGroup className = "members__icon__1A__1"/> 
 
@@ -283,7 +283,7 @@ function Sider() {
 
             <br/>
 
-            <Link to = {url} style = {{color: membersColor}} onClick = {onSelectMembers}>
+            <Link to = "/member-information" style = {{color: membersColor}} onClick = {onSelectMembers}>
 
              {collapsed ? <HiUserGroup className = "members__icon__1A"/> : <HiUserGroup className = "members__icon__1A__open"/>}
 
