@@ -26,11 +26,11 @@ function BusinessProfileNotification(props) {
     <Card as = {Col} md = "12"> 
         <Row>
             <Card.Body className = "space__between__flex__profile__notification">
-                <Link to = "/dashboard" className = "row__flex__profile__notification" onClick = {onBusinessProfileState}>    
+                <Link to = "/" className = "row__flex__profile__notification" onClick = {onBusinessProfileState}>    
                     <Card.Subtitle className = "profile__notification ml-3">{props.stepDetails}</Card.Subtitle>
                 </Link>
 
-                <Link to = "/dashboard" className = "row__flex__profile__notification" onClick = {onBusinessProfileState}>   
+                <Link to = "/" className = "row__flex__profile__notification" onClick = {onBusinessProfileState}>   
                     <Card.Subtitle className = "mr-3 text-muted" style = {{marginTop: "-3px"}}>
 
                         {!businessProfile ?
