@@ -37,7 +37,7 @@ function App() {
                     <Route exact path = "/kool-company/newly-created-pockets" component = {NewPockets} />
                     <Route exact path = "/move-money/within-same-company" component = {SameCompany} />
 
-                    <Route exact path = "/dashboard" component = {Dashboard1A} />
+                    <Route exact path = "/" component = {Dashboard1A} />
                     <Route exact path = "/personal-profile" component = {PersonalProfile} />
                     <Route exact path = "/business-profile" component = {BusinessProfile} />
                     <Route exact path = "/add-members" component = {Members} />

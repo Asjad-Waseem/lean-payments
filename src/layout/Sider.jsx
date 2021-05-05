@@ -130,7 +130,7 @@ function Sider() {
 
            <br/>
 
-            <Link to = "/dashboard" style = {{color: dashboardColor}} onClick = {onSelectDashboard}>
+            <Link to = "/" style = {{color: dashboardColor}} onClick = {onSelectDashboard}>
 
               <HiHome className = "dashboard__icon__open__1A__1"/>
 
@@ -255,7 +255,7 @@ function Sider() {
 
           <br/>
 
-            <Link to = "/dashboard" style = {{color: dashboardColor}} onClick = {onSelectDashboard}>
+            <Link to = "/" style = {{color: dashboardColor}} onClick = {onSelectDashboard}>
 
               {collapsed ? <HiHome className = "dashboard__icon__1A"/> : <HiHome className = "dashboard__icon__open__1A"/>}
 
